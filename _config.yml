@@ -1,4 +1,3 @@
 exclude: [LICENSE, Resources, Gemfile, Gemfile.lock]
-baseurl: /ChaosClock
 sass:
     style: :expanded #:compressed

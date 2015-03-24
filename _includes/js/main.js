@@ -29,12 +29,20 @@ jQuery(document).ready(function($) {
         $body = $('body'),
         $htmlbody = $('html,body'),
         $contactLink = $('#internal-contact-link'),
+        $internalLink = $('#internal-calendar-link, #internal-clock-link'),
         $slides = $('#slides');
 
     $contactLink.click(function(event) {
         event.preventDefault();
         $htmlbody.animate({
             scrollTop: $document.height() - getWindowHeight()
+        }, 500, 'easeInOutQuint');
+    });
+
+    $internalLink.click(function(event) {
+        event.preventDefault();
+        $htmlbody.animate({
+            scrollTop: $($(this).attr('href')).offset().top
         }, 500, 'easeInOutQuint');
     });
 

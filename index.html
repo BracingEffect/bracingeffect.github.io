@@ -42,12 +42,17 @@
 {% capture style_css %}{% include css/style.scss %}{% endcapture %}
 {{ style_css | scssify }}
     </style>
+    <style type="text/css">
+{% capture discordian_css %}{% include css/discordian.scss %}{% endcapture %}
+{{ discordian_css | scssify }}
+    </style>
 
 </head>
 <body>
-    <div id="contact">
-        <div class="content">
-            <div id="bracingeffect-logo-container">
+<div id="contact">
+    <div class="content">
+        <div id="bracingeffect-logo-container">
+            <a id="bracingeffect-root-link" href="http://bracingeffect.com">
                 <div id="bracingeffect-logo" class="background-image">
                     <span class="spacer"></span>
                 </div>
@@ -55,48 +60,57 @@
                     <h1 id="bracing-text">Bracing</h1>
                     <h1 id="effect-text">Effect</h1>
                 </div>
-            </div>
-            <div class="clear"></div>
-            <div class="email">
-                Contact us at <a href="mailto:support@bracingeffect.com">support@bracingeffect.com</a>
-            </div>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <div class="email">
+            Contact us at <a href="mailto:support@bracingeffect.com">support@bracingeffect.com</a>
         </div>
     </div>
-
-    <div id="chaos" class="slide ratio-4x3">
-        <div class="background-image slide-image">
-            <span class="spacer"></span>
+</div>
+<div id="chaos" class="slide ratio-4x3">
+    <span class="spacer"></span>
+    <div id="content">
+        <div id="header" class="float-right">
+            <div id="chaosclock-logo" class="background-image"><span class="spacer"></span></div>
+            <h1 id="title">Chaos Clock</h1>
         </div>
-        <div id="content">
-            <div id="header" class="float-right">
-                <div id="chaosclock-logo" class="background-image"><span class="spacer"></span></div>
-                <h1 id="title">Chaos Clock</h1>
-            </div>
-            <div id="text" class="float-right">
-                Date & time measurement for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>.
-                <br/>
-                <br/>
-                <span class="sidenote">Hail Eris!</span>
-            </div>
-            <div id="badge-container" class="float-right">
-                <a id="chaosclock-itunes-link" href="https://itunes.apple.com/us/app/chaos-clock/id977164677?ls=1&mt=8">
-                    <span class="accessibility-text">Download on the App Store</span>
-                    <div id="appstore-badge" class="background-image"><span class="spacer"></span></div></a>
-            </div>
-            <a id="internal-contact-link" class="float-right" href="#">Contact us</a>
+        <div id="text" class="float-right">
+            <a id="internal-calendar-link" href="#discordian-calendar">Date</a> &
+            <a id="internal-clock-link" href="#discordian-clock">time</a> measurement
+            for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>.
+            <br/>
+            <br/>
+            <span class="subtle">Hail Eris!</span>
         </div>
-        <div id="iphone" class="background-image">
-            <div id="slides">
-                <div id="screenshot01" class="screenshot background-image"></div>
-                <div id="screenshot02" class="screenshot background-image"></div>
-                <div id="screenshot03" class="screenshot background-image"></div>
-                <div id="screenshot04" class="screenshot background-image"></div>
-                <div id="screenshot05" class="screenshot background-image"></div>
-            </div>
+        <div id="badge-container" class="float-right">
+            <a id="chaosclock-itunes-link" href="https://itunes.apple.com/us/app/chaos-clock/id977164677?ls=1&mt=8">
+                <span class="accessibility-text">Download on the App Store</span>
+                <div id="appstore-badge" class="background-image"><span class="spacer"></span></div></a>
+        </div>
+        <a id="internal-contact-link" class="float-right" href="#">Contact us</a>
+    </div>
+    <div id="iphone" class="background-image">
+        <div id="slides">
+            <div id="screenshot01" class="screenshot background-image"></div>
+            <div id="screenshot02" class="screenshot background-image"></div>
+            <div id="screenshot03" class="screenshot background-image"></div>
+            <div id="screenshot04" class="screenshot background-image"></div>
+            <div id="screenshot05" class="screenshot background-image"></div>
         </div>
     </div>
-
-    <div id="contact-scroll-spacer"></div>
+</div>
+<div id="reference">
+    <div id="discordian-calendar">
+        <div class="hr"></div>
+        {% include discordian_calendar.html %}
+    </div>
+    <div id="discordian-clock">
+        <div class="hr"></div>
+        {% include discordian_clock.html %}
+    </div>
+</div>
+<div id="contact-scroll-spacer"></div>
 
 <script type="text/javascript">
 {% include js/jquery.min.js %}

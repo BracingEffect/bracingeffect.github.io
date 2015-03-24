@@ -3,9 +3,11 @@
 $bracing_blue: #0066cc; // rgb(0,102,204)
 $parsnip_green: #40C000; // rgb(64,192,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
+$github_purple: #400440; // rgb(64,4,64)
 $software_background: #f7f8f9;
 $images_path: "images/";
 $fonts_path: "fonts/";
+$subtle_text: #a0a0a0;
 
 
 /****************************************
@@ -109,6 +111,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0 0;
 }
 
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.subtle {
+    color: $subtle_text;
+}
+
 .clear {
     clear: both;
 }
@@ -202,12 +213,7 @@ $content_margin_right: 48;
             width: (100 - (100 * 1.5 * $content_margin_right / $iphone_width)) * 1%;
             white-space: normal;
 
-            a {
-                color: #fff;
-                text-decoration: underline;
-            }
-
-            .sidenote {
+            .subtle {
                 font-size: 16px;
                 font-style: italic;
             }
@@ -284,6 +290,27 @@ $content_margin_right: 48;
 }
 
 /****************************************
+ * Discordian Calendar and Clock
+ ****************************************/
+ #reference {
+    background-color: #000;
+    padding-top: 5em;
+}
+
+#discordian-calendar,
+#discordian-clock {
+    padding: 0 0 5em 0;
+
+    .hr {
+        background-color: #000;
+        border-top: 1px #666 solid;
+        margin: 0 auto 0 auto;
+        padding: 5em 0 0 0;
+        width: 100px;
+    }
+}
+
+/****************************************
  * Contact info
  ****************************************/
 #contact,
@@ -320,7 +347,8 @@ $content_margin_right: 48;
         text-align: center;
 
         a {
-            color: $bracing_blue;
+            color: #000;
+            text-decoration: none;
         }
 
         #bracingeffect-logo-container {
@@ -357,6 +385,11 @@ $content_margin_right: 48;
             font-size: 1.25em;
             margin-top: 1em;
             width: 100%;
+
+            a {
+                color: $bracing_blue;
+                text-decoration: underline;
+            }
         }
     }
 }

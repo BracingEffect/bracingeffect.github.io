@@ -1,0 +1,200 @@
+<div class="discordian-calendar">
+
+<h1>Discordian Calendar</h1>
+
+<h2>Seasons</h2>
+<ul>
+    <li>Chaos - Patron Apostle Hung Mung</li>
+    <li>Discord - Patron Apostle Dr. Van Van Mojo</li>
+    <li>Confusion - Patron Apostle Sri Syadasti</li>
+    <li>Bureaucracy - Patron Apostle Zarathud</li>
+    <li>The Aftermath - Patron Apostle The Elder Malaclypse</li>
+</ul>
+
+<h2>Days of the Week<sup>*</sup></h2>
+<ul>
+    <li>Sweetmorn</li>
+    <li>Boomtime</li>
+    <li>Pungenday</li>
+    <li>Prickle-Prickle</li>
+    <li>Setting Orange</li>
+</ul>
+<span><sup>*</sup>The days of the week are named from the five Basic Elements: sweet, boom, pungent, prickle, and orange.</span>
+
+<h2>Holydays</h2>
+
+<div class="holydays-apostle">
+    <h3>Apostle Holydays</h3>
+    <ol>
+        <li>Mungday</li>
+        <li>Mojoday</li>
+        <li>Syaday</li>
+        <li>Zaraday</li>
+        <li>Maladay</li>
+    </ol>
+    Each occurs on the 5th
+    day of the Season
+</div>
+<div class="holydays-season">
+    <h3>Season Holydays</h3>
+    <ol>
+        <li>Chaoflux</li>
+        <li>Discoflux</li>
+        <li>Confuflux</li>
+        <li>Bureflux</li>
+        <li>Afflux</li>
+    </ol>
+   Each occurs on the 50th
+   day of each Season
+</div>
+<div class="holydays-sttibsday">
+    <h3>St. Tib's Day</h3>
+    Occurs on leap years (once every 4 years, <i class="subtle">1 + 4 = 5</i>) and is
+    inserted between the 59th and 60th days of the Season of Chaos.
+</div>
+
+<table class="gregorian-to-discordian">
+<thead>
+    <tr>
+        <th></th>
+        <th colspan="5"><h2>Gregorian</h2></th>
+        <th class="month-season-divider">&nbsp;</th>
+        <th colspan="5"><h2>Discordian</h2></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th colspan="5"></th>
+        <th class="month-season-divider">&nbsp;</th>
+        <th><h3>SM</h3></th>
+        <th><h3>BT</h3></th>
+        <th><h3>PD</h3></th>
+        <th><h3>PP</h3></th>
+        <th><h3>SO</h3></th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+{% assign stripe = "even,odd" | split:"," %}
+{% assign dayOfYear = 0 %}
+
+{% assign dayOfSeason = 0 %}
+{% assign seasons = "Chaos,Discord,Confusion,Bureaucracy,The Aftermath" | split:"," %}
+{% assign seasonClass = "chs,dsc,cfn,bcy,afm" | split:"," %}
+{% assign seasonIndex = 0 %}
+{% assign daysPerSeason = 73 %}
+
+{% assign dayOfMonth = 0 %}
+{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split:"," %}
+{% assign monthClass = "jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec" | split:"," %}
+{% assign monthIndex = 0 %}
+{% assign daysPerMonth = 31 %}
+
+{% for weekOfYear in (0..72) %}
+    {% assign daysSoFar = 5 | times:weekOfYear %}
+{% assign evenOdd = weekOfYear | modulo:2 %}
+<tr class="week week-{{ stripe[evenOdd] }}">
+    <td class="month month-title">
+        {% assign testDayOfMonth = dayOfMonth | plus:5 %}
+        {% if testDayOfMonth <= 5 %}
+            <h3>{{ months[monthIndex] }}</h3>
+        {% elsif testDayOfMonth > daysPerMonth %}
+            {% assign monthIndexPlus = monthIndex | plus:1 %}
+            <h3>{{ months[monthIndexPlus] }}</h3>
+        {% endif %}
+    </td>
+
+    {% for dayOfWeek in (1..5) %}
+        {% assign dayOfYear = daysSoFar | plus:dayOfWeek %}
+        {% assign dayOfMonth = dayOfMonth | plus:1 %}
+        {% assign evenOdd = dayOfWeek | modulo:2 %}
+        {% assign monthEvenOdd = monthIndex | modulo:2 %}
+        <td class="
+            month
+            month-{{ monthClass[monthIndex] }}
+            month-{{ stripe[monthEvenOdd] }}
+            day
+            day-{{ stripe[evenOdd] }}">
+
+            <span class="day-number">{{ dayOfMonth }}</span>
+        </td>
+        {% assign dayOfMonth = dayOfMonth | modulo:daysPerMonth %}
+        {% if dayOfMonth == 0 %}
+            {% assign monthIndex = monthIndex | plus:1 %}
+            {% case monthIndex %}
+            {% when 0 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 1 %}
+                {% assign daysPerMonth = 28 %}
+            {% when 2 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 3 %}
+                {% assign daysPerMonth = 30 %}
+            {% when 4 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 5 %}
+                {% assign daysPerMonth = 30 %}
+            {% when 6 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 7 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 8 %}
+                {% assign daysPerMonth = 30 %}
+            {% when 9 %}
+                {% assign daysPerMonth = 31 %}
+            {% when 10 %}
+                {% assign daysPerMonth = 30 %}
+            {% when 11 %}
+                {% assign daysPerMonth = 31 %}
+            {% endcase %}
+        {% endif %}
+    {% endfor %}
+
+    <td class="month-season-divider">&nbsp;</td>
+
+    {% for dayOfWeek in (1..5) %}
+        {% assign dayOfSeason = dayOfSeason | plus:1 %}
+        {% assign evenOdd = dayOfWeek | modulo:2 %}
+        {% assign seasonEvenOdd = seasonIndex | modulo:2 %}
+        <td class="
+            season
+            season-{{ seasonClass[seasonIndex] }}
+            season-{{ stripe[seasonEvenOdd] }}
+            day
+            day-{{ stripe[evenOdd] }}">
+
+            <span class="day-number">{{ dayOfSeason }}</span>
+        </td>
+        {% assign dayOfSeason = dayOfSeason | modulo:daysPerSeason %}
+        {% if dayOfSeason == 0 %}
+            {% assign seasonIndex = seasonIndex | plus:1 %}
+        {% endif %}
+    {% endfor %}
+    <td class="season season-title">
+        {% if dayOfSeason <= 5 %}<h3>{{ seasons[seasonIndex] }}</h3>{% endif %}
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<h2><span class="mw-headline">References</span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+    <li>
+        The original Discordian Calendar can be found on
+        <a href="http://www.principiadiscordia.com/book/41.php">Page 34</a> of the
+        <a href="http://principiadiscordia.com">Principia Discordia</a>
+    </li>
+    <li>
+        Wikipedia's entry on
+        <a href="http://en.wikipedia.org/wiki/Principia_Discordia">Principia Discordia</a>
+    </li>
+    <li>
+        Wikipedia's entry on the
+        <a href="http://en.wikipedia.org/wiki/Discordian_calendar">Discordian Calendar</a>
+    </li>
+</ol>
+</div>
+
+</div>
