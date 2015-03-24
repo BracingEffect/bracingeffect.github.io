@@ -1,0 +1,494 @@
+
+// $bracing_blue: #0080ff; // rgb(0,128,255)
+$bracing_blue: #0066cc; // rgb(0,102,204)
+$parsnip_green: #40C000; // rgb(64,192,0)
+$chaos_violet: #a00aa0; // rgb(160,10,160)
+$software_background: #f7f8f9;
+$images_path: "images/";
+$fonts_path: "fonts/";
+
+
+/****************************************
+ * SASS mixins
+ ****************************************/
+
+@mixin text-shadow($shadows...) {
+    -webkit-text-shadow: $shadows;
+    -moz-text-shadow: $shadows;
+    -o-text-shadow: $shadows;
+    text-shadow: $shadows;
+}
+
+@mixin box-shadow($shadows...) {
+    -webkit-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    -o-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+
+@mixin background-size($sizes...) {
+    -webkit-background-size: $sizes;
+    -moz-background-size: $sizes;
+    -o-background-size: $sizes;
+    background-size: $sizes;
+}
+
+@mixin border-radius($radius...) {
+    -moz-border-radius: $radius;
+    -khtml-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin translateZ($z) {
+    -webkit-transform: translateZ(#{$z}px);
+    -moz-transform: translateZ(#{$z}px);
+    -o-transform: translateZ(#{$z}px);
+    -khtml-transform: translateZ(#{$z}px);
+    -ms-transform: translateZ(#{$z}px);
+    transform: translateZ(#{$z}px);
+}
+
+@mixin translateZScale($z) {
+    $scale: 1 + ($z * -1) / $perspective;
+    -webkit-transform: translateZ(#{$z}px) scale($scale);
+    -moz-transform: translateZ(#{$z}px) scale($scale);
+    -o-transform: translateZ(#{$z}px) scale($scale);
+    -khtml-transform: translateZ(#{$z}px) scale($scale);
+    -ms-transform: translateZ(#{$z}px) scale($scale);
+    transform: translateZ(#{$z}px) scale($scale);
+}
+
+@mixin transform($x...) {
+    -webkit-transform: $x;
+    -moz-transform: $x;
+    -o-transform: $x;
+    -khtml-transform: $x;
+    -ms-transform: $x;
+    transform: $x;
+}
+
+/****************************************
+ * Web Fonts
+ ****************************************/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(#{$fonts_path}Lato-Light.ttf) format('truetype');
+}
+
+/****************************************
+ * Global styles
+ ****************************************/
+
+html {
+}
+
+body {
+}
+
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    background-color: #fff;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.accessibility-text {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
+
+.owl-carousel {
+    cursor: move;
+    cursor: grab;
+}
+
+.grabbing,
+.owl-wrapper.grabbing {
+    cursor: move;
+    cursor: grabbing;
+}
+
+/****************************************
+ * Chaos slide
+ ****************************************/
+
+$badge_height: 40;
+$badge_width: 135;
+$iphone_height: 754;
+$iphone_width: 368;
+$margin_top: 16;
+$margin_bottom: 32;
+$iphone_bezel_height: 92;
+$iphone_bezel_width: 24;
+$min_height: $iphone_height + $margin_top + $margin_bottom;
+$content_percent: 55;
+$content_margin_right: 48;
+
+#chaos {
+    overflow: hidden;
+    border-top-right-radius: 1px; /* required for iOS zoom bug */
+    border-top-left-radius: 1px; /* required for iOS zoom bug */
+    z-index: 0;
+    min-height: #{$min_height}px;
+
+    #content {
+        position: absolute;
+        top: #{$margin_top}px;
+        left: 0;
+        right: (100 - $content_percent) * 1%;
+        bottom: 0;
+        z-index: 99;
+
+        text-align: right;
+
+        .float-right {
+            right: #{$content_margin_right}px;
+        }
+
+        #header {
+            position: absolute;
+            top: #{$iphone_bezel_height}px;
+            white-space: nowrap;
+            z-index: 1;
+
+            #title, #chaosclock-logo {
+                display: inline-block;
+                font-size: 5em;
+            }
+
+            #title {
+                margin-right: 0;
+            }
+
+            #chaosclock-logo {
+                width: 1em;
+                height: 1em;
+                margin-right: 0.1em;
+                vertical-align: -15%;
+            }
+        }
+
+        #text {
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            top: #{$iphone_bezel_height}px;
+            margin-top: 5em;
+            max-width: 12em;
+            width: (100 - (100 * 1.5 * $content_margin_right / $iphone_width)) * 1%;
+            white-space: normal;
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+
+            .sidenote {
+                font-size: 16px;
+                font-style: italic;
+            }
+        }
+
+        // $badge_container_height: ($badge_height * 2) + 10;
+        $badge_container_height: $badge_height;
+        #badge-container {
+            width: #{$badge_width}px;
+            height: #{$badge_container_height}px;
+            position: absolute;
+            top: #{$iphone_height - $iphone_bezel_height - $badge_container_height}px;
+
+            #appstore-badge {
+                width: #{$badge_width}px;
+                height: #{$badge_height}px;
+            }
+
+            #appstore-badge .spacer {
+                padding-top: 29.722%;
+            }
+        }
+
+        #internal-contact-link {
+            color: #fff;
+            font-size: 1.75em;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+
+            margin-right: 4px;
+            overflow: visible;
+
+            position: absolute;
+            top: #{$iphone_height - $iphone_bezel_height + 10}px;
+        }
+    }
+
+    #iphone {
+        position: absolute;
+        top: #{$margin_top}px;
+        left: ($content_percent) * 1%;
+        height: #{$iphone_height}px;
+        width: #{$iphone_width}px;
+        z-index: 100;
+
+        #slides {
+            position: absolute;
+            height: 568px;
+            width: 320px;
+            top: #{$iphone_bezel_height}px;
+            left: #{$iphone_bezel_width}px;
+            overflow: hidden;
+
+            .screenshot {
+                height: 568px;
+                width: 320px;
+            }
+        }
+
+        .owl-controls {
+            margin-top: #{$iphone_bezel_height + ($margin_bottom / 2) - (16 / 2)}px;
+            z-index: 1000;
+        }
+
+        .owl-controls .owl-pagination span {
+            background-color: #333;
+        }
+
+        .owl-controls .owl-pagination .active span {
+            background-color: #ddd;
+        }
+    }
+}
+
+/****************************************
+ * Contact info
+ ****************************************/
+#contact,
+#contact-scroll-spacer {
+    padding-top: 16em;
+}
+
+#contact-scroll-spacer {
+    background-color: transparent;
+    width: 10px;
+    z-index: 0;
+}
+
+#contact {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    overflow: visible;
+    background-color: #fff;
+    color: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 3em;
+        text-align: center;
+
+        a {
+            color: $bracing_blue;
+        }
+
+        #bracingeffect-logo-container {
+            text-align: left;
+            display: inline-block;
+
+            #bracingeffect-logo {
+                background-position: 50% 50%;
+                background-size: 100%;
+                width: 4.625em;
+                margin: -0.7em 1em 0 0;
+                display: inline;
+                float: left;
+
+                .spacer {
+                    padding-top: 167.18%
+                }
+            }
+            #bracingeffect-text {
+                float: right;
+
+                h1, h2 {
+                    font-size: 4em;
+                    line-height: 0.8em;
+                }
+
+                #effect-text {
+                    color: $bracing_blue;
+                }
+            }
+        }
+
+        .email {
+            font-size: 1.25em;
+            margin-top: 1em;
+            width: 100%;
+        }
+    }
+}
+
+/****************************************
+ * Background images
+ ****************************************/
+.background-image {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: transparent;
+    display: inline-block;
+    line-height: 1em;
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+.spacer {
+    display: block;
+    height: 0;
+}
+
+@each $w, $h, $padding in (1, 1, 100%),
+                          (1, 2, 200%),
+                          (2, 1, 50%),
+                          (3, 4, 133%),
+                          (4, 1, 25%),
+                          (4, 3, 75%),
+                          (5, 6, 120%),
+                          (6, 7, 116.67%) {
+    .ratio-#{$w}x#{$h} .spacer, .ratio-#{$w}x#{$h} > .spacer {
+        padding-top: #{$padding};
+    }
+}
+
+.slide {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide .slide-image {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#iphone{background-image:url(#{$images_path}iphone.png)}
+#chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
+#appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
+#bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo.png)}
+#chaos > .slide-image{background-image:url(#{$images_path}bg.jpg)}
+#screenshot01{background-image:url(#{$images_path}screenshot01.png)}
+#screenshot02{background-image:url(#{$images_path}screenshot02.png)}
+#screenshot03{background-image:url(#{$images_path}screenshot03.png)}
+#screenshot04{background-image:url(#{$images_path}screenshot04.png)}
+#screenshot05{background-image:url(#{$images_path}screenshot05.png)}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-moz-min-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:2/1),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min-resolution:192dpi),
+only screen and (min-resolution:2dppx) {
+    #iphone{background-image:url(#{$images_path}iphone_2x.png)}
+    #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
+    #appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
+    #bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo_2x.png)}
+    #chaos > .slide-image{background-image:url(#{$images_path}bg_2x.jpg)}
+    #screenshot01{background-image:url(#{$images_path}screenshot01_2x.png)}
+    #screenshot02{background-image:url(#{$images_path}screenshot02_2x.png)}
+    #screenshot03{background-image:url(#{$images_path}screenshot03_2x.png)}
+    #screenshot04{background-image:url(#{$images_path}screenshot04_2x.png)}
+    #screenshot05{background-image:url(#{$images_path}screenshot05_2x.png)}
+}
+
+/****************************************
+ * Responsive breakpoints
+ ****************************************/
+#title {font-size: 16px;}
+$font: 15;
+$width: 1048;
+$breakpoint: $iphone_width * (100 / (100 - $content_percent));
+@while $width >= $breakpoint and $font >= 1 {
+    @media all and (max-width: #{$width}px) {
+        #chaos #content #header {
+            font-size: #{$font}px;
+        }
+    }
+    $font: $font - 0.5;
+    $width: $width - 32;
+}
+
+$font: $font - 0.75;
+@while $width >= 530 and $font >= 1 {
+    @media all and (max-width: #{$width}px) {
+        #chaos #content #header {
+            font-size: #{$font}px;
+        }
+    }
+    $font: $font - 0.75;
+    $width: $width - 32;
+}
+
+@media all and (max-width: #{$breakpoint}px) {
+    #chaos #content .float-right {
+        right: ($content_margin_right / $iphone_width) * 100%;
+    }
+
+    #chaos #iphone {
+        right: 0;
+        left: auto;
+    }
+
+    #chaos #content {
+        right: #{$iphone_width}px;
+    }
+}
+
+@media all and (min-height: #{$min_height}px) {
+    #chaos #iphone,
+    #chaos #content {
+        top: 2%;
+    }
+}

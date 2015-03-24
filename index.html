@@ -1,0 +1,117 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="Chaos Clock, timekeeping for Discordians">
+    <meta name="keywords" content="iOS,iPhone,iPad,App,Apps,Discordian,Clock,Calendar,Chaos,Principia Discordia,Eris,Holyday,Discordianism">
+    <meta id="viewport" name="viewport">
+    <script>
+        (function(doc) {
+            if (window.matchMedia) {
+                var viewport = document.getElementById('viewport');
+                if(window.matchMedia('(max-device-width: 736px)').matches) {
+                    viewport.setAttribute('content', 'width=736');
+                } else {
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1');
+                }
+            }
+        }(document));
+    </script>
+
+    <title>Bracing Effect</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <style type="text/css">
+{% capture reset_css %}{% include css/reset.scss %}{% endcapture %}
+{{ reset_css | scssify }}
+    </style>
+    <style type="text/css">
+{% capture owl_carousel_css %}{% include owl-carousel/owl.carousel.css %}{% endcapture %}
+{{ owl_carousel_css | scssify }}
+    </style>
+    <style type="text/css">
+{% capture owl_theme_css %}{% include owl-carousel/owl.theme.css %}{% endcapture %}
+{{ owl_theme_css | scssify }}
+    </style>
+    <style type="text/css">
+{% capture style_css %}{% include css/style.scss %}{% endcapture %}
+{{ style_css | scssify }}
+    </style>
+
+</head>
+<body>
+    <div id="contact">
+        <div class="content">
+            <div id="bracingeffect-logo-container">
+                <div id="bracingeffect-logo" class="background-image">
+                    <span class="spacer"></span>
+                </div>
+                <div id="bracingeffect-text">
+                    <h1 id="bracing-text">Bracing</h1>
+                    <h1 id="effect-text">Effect</h1>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="email">
+                Contact us at <a href="mailto:support@bracingeffect.com">support@bracingeffect.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="chaos" class="slide ratio-4x3">
+        <div class="background-image slide-image">
+            <span class="spacer"></span>
+        </div>
+        <div id="content">
+            <div id="header" class="float-right">
+                <div id="chaosclock-logo" class="background-image"><span class="spacer"></span></div>
+                <h1 id="title">Chaos Clock</h1>
+            </div>
+            <div id="text" class="float-right">
+                Date & time measurement for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>.
+                <br/>
+                <br/>
+                <span class="sidenote">Hail Eris!</span>
+            </div>
+            <div id="badge-container" class="float-right">
+                <a id="chaosclock-itunes-link" href="https://itunes.apple.com/us/app/chaos-clock/id977164677?ls=1&mt=8">
+                    <span class="accessibility-text">Download on the App Store</span>
+                    <div id="appstore-badge" class="background-image"><span class="spacer"></span></div></a>
+            </div>
+            <a id="internal-contact-link" class="float-right" href="#">Contact us</a>
+        </div>
+        <div id="iphone" class="background-image">
+            <div id="slides">
+                <div id="screenshot01" class="screenshot background-image"></div>
+                <div id="screenshot02" class="screenshot background-image"></div>
+                <div id="screenshot03" class="screenshot background-image"></div>
+                <div id="screenshot04" class="screenshot background-image"></div>
+                <div id="screenshot05" class="screenshot background-image"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-scroll-spacer"></div>
+
+<script type="text/javascript">
+{% include js/jquery.min.js %}
+</script>
+<script type="text/javascript">
+{% include js/jquery.easing.js %}
+</script>
+<script type="text/javascript">
+{% include owl-carousel/owl.carousel.min.js %}
+</script>
+<script type="text/javascript">
+{% include js/main.js %}
+</script>
+
+{% include google_analytics.html %}
+
+</body>
+</html>
