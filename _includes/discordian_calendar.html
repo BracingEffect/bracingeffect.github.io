@@ -70,22 +70,22 @@ day as January 1, 2015
 <table class="gregorian-to-discordian-calendar">
 <thead>
     <tr>
-        <th></th>
+        <td></td>
         <th colspan="5"><h2>Gregorian</h2></th>
-        <th class="month-season-divider">&nbsp;</th>
+        <td class="month-season-divider">&nbsp;</td>
         <th colspan="5"><h2>Discordian</h2></th>
-        <th></th>
+        <td></td>
     </tr>
     <tr>
-        <th></th>
+        <td></td>
         <th colspan="5"></th>
-        <th class="month-season-divider">&nbsp;</th>
+        <td class="month-season-divider">&nbsp;</td>
         <th><h3 data-toggle="tooltip" title="Sweetmorn">SM</h3></th>
         <th><h3 data-toggle="tooltip" title="Boomtime">BT</h3></th>
         <th><h3 data-toggle="tooltip" title="Pungenday">PD</h3></th>
         <th><h3 data-toggle="tooltip" title="Prickle-Prickle">PP</h3></th>
         <th><h3 data-toggle="tooltip" title="Setting Orange">SO</h3></th>
-        <th></th>
+        <td></td>
     </tr>
 </thead>
 <tbody>
@@ -194,7 +194,7 @@ day as January 1, 2015
         {% endif %}
     {% endfor %}
     <td class="season season-title">
-        {% if dayOfSeason <= 5 %}<h3>{{ seasons[seasonIndex] }}</h3>{% endif %}
+        {% if dayOfSeason <= 5 and seasonIndex < 5 %}<h3>{{ seasons[seasonIndex] }}</h3>{% endif %}
     </td>
 </tr>
 {% endfor %}
