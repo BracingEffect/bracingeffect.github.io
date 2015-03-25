@@ -1,7 +1,8 @@
 
 // $bracing_blue: #0080ff; // rgb(0,128,255)
 $bracing_blue: #0066cc; // rgb(0,102,204)
-$parsnip_green: #40C000; // rgb(64,192,0)
+// $parsnip_green: #40C000; // rgb(64,192,0)
+$parsnip_green: #309000; // rgb(64,192,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 $software_background: #f7f8f9;
@@ -214,7 +215,7 @@ $content_margin_right: 48;
     z-index: 0;
     min-height: #{$min_height}px;
 
-    #content {
+    .content {
         position: absolute;
         top: #{$margin_top}px;
         left: 0;
@@ -398,52 +399,104 @@ $content_margin_right: 48;
         padding-top: 3em;
         text-align: center;
 
+        * {
+            color: #000;
+        }
+
         a {
             text-decoration: none;
              h1 {
-                color: #000;
                 text-decoration: none;
             }
         }
 
-        #bracingeffect-logo-container {
-            text-align: left;
+        #parsnip-column,
+        #bracingeffect-column {
             display: inline-block;
+        }
 
-            #bracingeffect-logo {
-                background-position: 50% 50%;
-                background-size: 100%;
-                width: 4.625em;
-                margin: -0.7em 1em 0 0;
-                display: inline;
-                float: left;
+        #parsnip-column {
+            width: 53%;
+        }
 
-                .spacer {
-                    padding-top: 167.18%
+        #bracingeffect-column {
+            width: 46%;
+
+            #bracingeffect-logo-container {
+                text-align: center;
+                white-space: nowrap;
+
+                #bracingeffect-logo {
+                    background-position: 50% 50%;
+                    background-size: 100%;
+                    width: 4.625em;
+                    display: inline-block;
+                    margin-top: -6em;
+
+                    .spacer {
+                        padding-top: 167.18%
+                    }
+                }
+                #bracingeffect-text {
+                    display: inline-block;
+                    text-align: left;
+
+                    h1, h2 {
+                        font-size: 4em;
+                        line-height: 0.8em;
+                    }
+
+                    #effect-text {
+                        color: $bracing_blue;
+                    }
                 }
             }
-            #bracingeffect-text {
-                float: right;
 
-                h1, h2 {
-                    font-size: 4em;
-                    line-height: 0.8em;
-                }
+            .email {
+                font-size: 1.25em;
+                margin-top: 1em;
+                width: 100%;
 
-                #effect-text {
+                a {
                     color: $bracing_blue;
+                    text-decoration: underline;
                 }
             }
         }
 
-        .email {
-            font-size: 1.25em;
-            margin-top: 1em;
-            width: 100%;
+        #parsnip-column {
 
-            a {
-                color: $bracing_blue;
-                text-decoration: underline;
+            #parsnip-logo-container {
+                text-align: center;
+                white-space: nowrap;
+
+                #parsnip-link {
+                    margin-left: -0.5em;
+                }
+
+                #parsnip-logo {
+                    background-position: 50% 50%;
+                    background-size: 100%;
+                    width: 5em;
+                    display: inline-block;
+                    margin-top: -3em;
+
+                    .spacer {
+                        padding-top: 167.18%
+                    }
+                }
+                #parsnip-text {
+                    color: $parsnip_green;
+                    display: inline-block;
+                    font-size: 4em;
+                    margin-left: -0.25em;
+                }
+            }
+
+            .parsnip-description {
+                font-size: 1.25em;
+                margin-top: 0.5em;
+                width: 100%;
             }
         }
     }
@@ -504,6 +557,7 @@ $content_margin_right: 48;
 #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
 #appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
 #bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo.png)}
+#parsnip-logo{background-image:url(#{$images_path}parsnip-logo.png)}
 #chaos > .slide-image{background-image:url(#{$images_path}bg.jpg)}
 #screenshot01{background-image:url(#{$images_path}screenshot01.png)}
 #screenshot02{background-image:url(#{$images_path}screenshot02.png)}
@@ -523,6 +577,7 @@ only screen and (min-resolution:2dppx) {
     #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
     #appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
     #bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo_2x.png)}
+    #parsnip-logo{background-image:url(#{$images_path}parsnip-logo_2x.png)}
     #chaos > .slide-image{background-image:url(#{$images_path}bg_2x.jpg)}
     #screenshot01{background-image:url(#{$images_path}screenshot01_2x.png)}
     #screenshot02{background-image:url(#{$images_path}screenshot02_2x.png)}
@@ -540,7 +595,7 @@ $width: 1048;
 $breakpoint: $iphone_width * (100 / (100 - $content_percent));
 @while $width >= $breakpoint and $font >= 1 {
     @media all and (max-width: #{$width}px) {
-        #chaos #content #header {
+        #chaos .content #header {
             font-size: #{$font}px;
         }
     }
@@ -551,7 +606,7 @@ $breakpoint: $iphone_width * (100 / (100 - $content_percent));
 $font: $font - 0.75;
 @while $width >= 530 and $font >= 1 {
     @media all and (max-width: #{$width}px) {
-        #chaos #content #header {
+        #chaos .content #header {
             font-size: #{$font}px;
         }
     }
@@ -560,7 +615,7 @@ $font: $font - 0.75;
 }
 
 @media all and (max-width: #{$breakpoint}px) {
-    #chaos #content .float-right {
+    #chaos .content .float-right {
         right: ($content_margin_right / $iphone_width) * 100%;
     }
 
@@ -569,14 +624,20 @@ $font: $font - 0.75;
         left: auto;
     }
 
-    #chaos #content {
+    #chaos .content {
         right: #{$iphone_width}px;
+    }
+}
+
+@media all and (max-width: 864px) {
+    #contact .content {
+        font-size: 14px;
     }
 }
 
 @media all and (min-height: #{$min_height}px) {
     #chaos #iphone,
-    #chaos #content {
+    #chaos .content {
         top: 2%;
     }
 }
