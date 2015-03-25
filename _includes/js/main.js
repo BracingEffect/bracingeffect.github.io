@@ -25,12 +25,19 @@ if (isMobile) {
 }
 
 jQuery(document).ready(function($) {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            container : 'body'
+        })
+    })
+
     var $document = $(document),
         $body = $('body'),
         $htmlbody = $('html,body'),
         $contactLink = $('#internal-contact-link'),
         $internalLink = $('#internal-calendar-link, #internal-clock-link'),
-        $slides = $('#slides');
+        $slides = $('#slides'),
+        $days = $('td.day');
 
     $contactLink.click(function(event) {
         event.preventDefault();
@@ -44,6 +51,19 @@ jQuery(document).ready(function($) {
         $htmlbody.animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500, 'easeInOutQuint');
+    });
+
+    $days.hover(function(event) {
+        try {
+            var dayNumber = $(this).data("day");
+            $("td.day-" + dayNumber).addClass("active").tooltip("show");
+        } catch(ex) {}
+    },
+    function(event) {
+        try {
+            var dayNumber = $(this).data("day");
+            $("td.day.active").removeClass("active").tooltip("hide");
+        } catch(ex) {}
     });
 
     $slides.owlCarousel({

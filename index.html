@@ -39,6 +39,9 @@
 {{ owl_theme_css | scssify }}
     </style>
     <style type="text/css">
+{% include css/bootstrap.min.css %}
+    </style>
+    <style type="text/css">
 {% capture style_css %}{% include css/style.scss %}{% endcapture %}
 {{ style_css | scssify }}
     </style>
@@ -78,7 +81,7 @@
         <div id="text" class="float-right">
             <a id="internal-calendar-link" href="#discordian-calendar">Date</a> &
             <a id="internal-clock-link" href="#discordian-clock">time</a> measurement
-            for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>.
+            for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>
             <br/>
             <br/>
             <span class="subtle">Hail Eris!</span>
@@ -101,12 +104,12 @@
     </div>
 </div>
 <div id="reference">
-    <div id="discordian-calendar">
         <div class="hr"></div>
+    <div id="discordian-calendar">
         {% include discordian_calendar.html %}
     </div>
-    <div id="discordian-clock">
         <div class="hr"></div>
+    <div id="discordian-clock">
         {% include discordian_clock.html %}
     </div>
 </div>
@@ -117,6 +120,9 @@
 </script>
 <script type="text/javascript">
 {% include js/jquery.easing.js %}
+</script>
+<script type="text/javascript">
+{% include js/bootstrap.min.js %}
 </script>
 <script type="text/javascript">
 {% include owl-carousel/owl.carousel.min.js %}

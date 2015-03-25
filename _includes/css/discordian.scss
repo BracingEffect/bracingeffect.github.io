@@ -1,13 +1,21 @@
 
+$background_color: #000;
+
+$normal_text: #f0f0f0;
+$subtle_text: #a0a0a0;
+$link_text: #c0c0c0;
 
 .discordian-calendar,
 .discordian-clock {
-    max-width: 736px;
-    margin: 0 auto 0 auto;
+    font-size: 1.15em;
 
     h1 {
         text-align: center;
         font-size: 3em;
+    }
+
+    h1.title {
+        padding-bottom: 0.5em;
     }
 
     h2 {
@@ -19,11 +27,22 @@
     }
 
     > h2 {
-        margin-top: 1em;
+        padding: 1em 0 0.05em 0;
     }
-}
 
-.discordian-calendar {
+    p {
+        padding: 0.1em 0 0.1em 0;
+    }
+
+    .subtle {
+        color: $subtle_text;
+    }
+
+    ul,
+    ol.references {
+        list-style: disc;
+        padding-left: 1.5em;
+    }
 
     .holydays-apostle,
     .holydays-season {
@@ -31,13 +50,64 @@
         display: inline-block;
     }
 
+    .thud-time,
+    .non-thud-time,
+    .universal-vs-local,
     .holydays-apostle,
     .holydays-season,
     .holydays-sttibsday {
-        margin-top: 1em;
+        h3 {
+            padding: 0 0 0.1em 0;
+        }
     }
 
-    .gregorian-to-discordian {
+    .thud-time,
+    .non-thud-time,
+    .universal-vs-local,
+    .holydays-sttibsday {
+        padding: 1em 0 0 0;
+    }
+}
+
+.discordian-clock {
+    .discordian-day-title {
+        padding-top: 0;
+    }
+
+    .discordian-to-standard-table {
+        margin: 0 auto 0 auto;
+
+        th h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .standard-discordian-divider {
+            width: 3em;
+            text-align: center;
+        }
+    }
+}
+
+.discordian-calendar {
+
+    .season-list,
+    .day-of-week-list,
+    .holyday-list {
+        list-style: lower-roman;
+        padding: 0.5em 0 0 2em;
+
+        li {
+            color: $subtle_text;
+            padding: 0 0 0.5em 0;
+
+            span {
+                color: $normal_text;
+            }
+        }
+    }
+
+    .gregorian-to-discordian-calendar {
         margin: 4em auto 0 auto;
 
         th {
@@ -50,7 +120,7 @@
         }
 
         th h3 {
-            font-size: 1.25em;
+            font-size: 1.15em;
             margin-bottom: 0.25em;
         }
 
@@ -75,16 +145,17 @@
 
         td.month-title {
             text-align: right;
-            padding-right: 1em;
+            padding-right: 0.85em;
         }
         td.season-title {
             text-align: left;
-            padding-left: 1em;
+            padding-left: 0.85em;
         }
 
         td.month-title h3,
         td.season-title h3 {
-            font-size: 1.5em;
+            font-size: 1.35em;
+            white-space: nowrap;
         }
 
         tr.week {
@@ -92,21 +163,20 @@
 
         td.month-even.day-even,
         td.season-even.day-even {
-            background-color: #626262;
+            background-color: #636363;
             border-bottom: 1px solid #484848;
         }
-
-        td.month-odd.day-even,
-        td.season-odd.day-even {
-            background-color: #2a2a2a;
-            border-bottom: 1px solid #000;
-        }
-
 
         td.month-even.day-odd,
         td.season-even.day-odd {
             background-color: #606060;
             border-bottom: 1px solid #484848;
+        }
+
+        td.month-odd.day-even,
+        td.season-odd.day-even {
+            background-color: #2b2b2b;
+            border-bottom: 1px solid #000;
         }
 
         td.month-odd.day-odd,
@@ -115,23 +185,25 @@
             border-bottom: 1px solid #000;
         }
 
-
-        .month-season-divider,
-        td.day {
+        td.day,
+        .month-season-divider {
             vertical-align: top;
-            height: 2.5em;
-            width: 2.5em;
+            height: 2.25em;
+            width: 2.25em;
+
+            .day-number {
+                font-size: 0.75em;
+                padding-left: 4px;
+            }
         }
 
-        td.day .day-number {
-            font-size: 0.75em;
-            padding-left: 4px;
-        }
-    }
+        td.day:hover, td.day.active {
+            background-color: #fff;
 
-    ol.references {
-        list-style: disc;
-        padding-left: 1.5em;
+            .day-number {
+                color: #000;
+            }
+        }
     }
 }
 
