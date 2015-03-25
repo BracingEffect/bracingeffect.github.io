@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100"
-   height="166"
+   width="200"
+   height="200"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Logo.svg">
+   sodipodi:docname="Bracing Effect Logo Light.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,14 +24,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.8971737"
-     inkscape:cx="50.000005"
+     inkscape:zoom="2.755718"
+     inkscape:cx="87.533403"
      inkscape:cy="83.393755"
      inkscape:document-units="px"
      inkscape:current-layer="layer6"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="852"
+     inkscape:window-width="1337"
+     inkscape:window-height="849"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -54,13 +54,13 @@
      id="layer6"
      inkscape:label="The Human Fund"
      style="display:inline"
-     transform="translate(0,-886.36218)">
+     transform="translate(0,-852.36218)">
     <g
        id="g4305"
        inkscape:export-filename="/Users/ratface/Sites/bracingeffect.com/images/bracingeffect-logo.png"
        inkscape:export-xdpi="64.699997"
        inkscape:export-ydpi="64.699997"
-       transform="matrix(0.97148205,0,0,0.96689492,-903.83502,-1648.9779)">
+       transform="matrix(0.97148205,0,0,0.96689492,-853.83503,-1665.978)">
       <path
          transform="translate(-90.165055,663.04968)"
          inkscape:connector-curvature="0"
