@@ -163,6 +163,8 @@ $tooltip_background_color: #d0d0d0;
     padding: 0.5em 1em 0.5em 1em;
     background-color: $tooltip_background_color;
     color: $tooltip_color;
+    white-space: nowrap;
+    max-width: 16em;
 }
 .tooltip.top .tooltip-arrow {
   border-top-color: $tooltip_background_color;

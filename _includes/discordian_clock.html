@@ -30,19 +30,107 @@
 </div>
 
 <h2>Discordian to Standard Time</h2>
-<table class="discordian-to-standard-table">
-<thead>
-    <tr><th><h2>Discordian</h2></th><th class="standard-discordian-divider"></th><th><h2>Standard</h2></th></tr>
-</thead>
+<div class="discordian-to-std">
+<h3>Unit Conversion</h3>
+<table class="discordian-to-std-units">
 <tbody>
-    <tr><td>THUD-hour</td><td class="standard-discordian-divider"> = </td><td>115 standard minutes</td></tr>
-    <tr><td>THUD-minute</td><td class="standard-discordian-divider"> = </td><td>23 standard minutes</td></tr>
-    <tr><td>THUD-second</td><td class="standard-discordian-divider"> = </td><td>60 standard seconds, or 1 standard minute</td></tr>
-    <tr><td>D-hour</td><td class="standard-discordian-divider"> = </td><td>5 standard minutes</td></tr>
-    <tr><td>D-minute</td><td class="standard-discordian-divider"> = </td><td>1 standard minute</td></tr>
-    <tr><td>D-second</td><td class="standard-discordian-divider"> = </td><td>12 standard seconds</td></tr>
+    <tr><td>THUD-hour</td><td class="discordian-std-divider"> = </td><td>115 standard minutes</td></tr>
+    <tr><td>THUD-minute</td><td class="discordian-std-divider"> = </td><td>23 standard minutes</td></tr>
+    <tr><td>THUD-second</td><td class="discordian-std-divider"> = </td><td>60 standard seconds, or 1 standard minute</td></tr>
+    <tr><td>D-hour</td><td class="discordian-std-divider"> = </td><td>5 standard minutes</td></tr>
+    <tr><td>D-minute</td><td class="discordian-std-divider"> = </td><td>1 standard minute</td></tr>
+    <tr><td>D-second</td><td class="discordian-std-divider"> = </td><td>12 standard seconds</td></tr>
 </tbody>
 </table>
+
+<table class="discordian-to-std-scale">
+<thead>
+    <tr>
+        <th colspan="3">
+            <h2 class="std-time-title">Standard</h2>
+            <h2 class="discordian-time-title">Discordian</h2>
+        </th>
+    </tr>
+</thead>
+<tbody>
+{% assign lastHour = 0 %}
+{% assign ampm = "AM" %}
+{% assign dHour = 0 %}
+{% assign stdHour = 0 %}
+{% assign stdMinute = 0 %}
+{% for thudMinute in (0..4) %}
+    {% if stdHour == 0 %}{% assign strStdHour = "12" %}{% else %}{% assign strStdHour = stdHour %}{% endif %}
+    {% if stdMinute < 10 %}{% assign strStdMinute = "0" | append:stdMinute %}{% else %}{%assign strStdMinute = stdMinute %}{% endif %}
+    {% assign strStdTime = strStdHour | append:":" | append:strStdMinute | append:" " | append:ampm %}
+    {% assign strDTime = dHour | append:":" | append:thudMinute | append:":00" %}
+    <tr class="thud-minute">
+        <td class="std-time" rowspan="23">
+            {% if stdHour == 0 %}12{% else %}{{ stdHour }}{% endif %}:{% if stdMinute < 10 %}0{% endif %}{{ stdMinute }} {{ ampm }}
+        </td>
+        <td class="discordian-std-divider" data-toggle="tooltip" title="{{ strStdTime }} – {{ strDTime }} THUD"></td>
+        <td class="discordian-time" rowspan="23">
+            {{ dHour }}:{{ thudMinute }} THUD
+        </td>
+    </tr>
+    {% assign stdMinute = stdMinute | plus:1 %}
+    {% for minute in (1..22) %}
+        {% if minute < 10 %}{% assign strMinute = "0" | append:minute %}{% else %}{% assign strMinute = minute %}{% endif %}
+        {% if stdHour == 0 %}{% assign strStdHour = "12" %}{% else %}{% assign strStdHour = stdHour %}{% endif %}
+        {% if stdMinute < 10 %}{% assign strStdMinute = "0" | append:stdMinute %}{% else %}{%assign strStdMinute = stdMinute %}{% endif %}
+        {% assign strStdTime = strStdHour | append:":" | append:strStdMinute | append:" " | append:ampm %}
+        {% assign strDTime = dHour | append:":" | append:thudMinute | append:":" | append:strMinute %}
+        <tr class="minute">
+            <td class="discordian-std-divider" data-toggle="tooltip" title="{{ strStdTime }} – {{ strDTime }} THUD"></td>
+        </tr>
+        {% assign stdMinute = stdMinute | plus:1 %}
+        {% if stdMinute >= 60 %}
+            {% assign lastHour = stdHour %}
+            {% assign stdHour = stdHour | plus:1 %}
+        {% endif %}
+        {% assign stdMinute = stdMinute | modulo:60 %}
+    {% endfor %}
+{% endfor %}
+{% for totalMinutes in (0..1324) %}
+    {% assign dMinute = totalMinutes | modulo:5 %}
+    {% if dMinute == 0 %}{% assign dHour = dHour | plus:1 %}{% endif %}
+    {% if stdMinute == 0 %}
+        {% assign stdHour = stdHour | plus:1 | modulo:12 %}
+        {% if stdHour == 0 %}{% assign ampm = "PM" %}{% endif %}
+    {% endif %}
+    {% if dMinute == 0 %}
+        {% if stdHour == 0 %}{% assign strStdHour = "12" %}{% else %}{% assign strStdHour = stdHour %}{% endif %}
+        {% if stdMinute < 10 %}{% assign strStdMinute = "0" | append:stdMinute %}{% else %}{%assign strStdMinute = stdMinute %}{% endif %}
+        {% assign strStdTime = strStdHour | append:":" | append:strStdMinute | append:" " | append:ampm %}
+        {% assign strDTime = dHour | append:":" | append:dMinute %}
+        {% if stdMinute == 0 %}
+            {% assign lastHour = stdHour %}
+            <tr class="minute minute-on-the-hour">
+                <td class="std-time" {% if stdMinute == 0 %}rowspan="12"{% endif %}>
+                    {{ strStdTime }}
+                </td>
+                <td class="discordian-std-divider" data-toggle="tooltip" title="{{ strStdTime }} – {{ strDTime }}"></td>
+                <td class="discordian-time" {% if stdMinute == 0 %}rowspan="12"{% endif %}>
+                    {{ strDTime }}
+                </td>
+            </tr>
+        {% else %}
+            <tr class="minute">
+                {% if lastHour != stdHour %}<td></td>{% endif %}
+                <td class="discordian-std-divider" data-toggle="tooltip" title="{{ strStdTime }} – {{ strDTime }}"></td>
+                {% if lastHour != stdHour %}<td></td>{% endif %}
+            </tr>
+        {% endif %}
+    {% endif %}
+    {% assign stdMinute = stdMinute | plus:1 | modulo:60 %}
+{% endfor %}
+        <tr class="minute minute-on-the-hour minute-final">
+            <td class="std-time">11:59 PM</td>
+            <td class="discordian-std-divider" data-toggle="tooltip" title="11:59 PM – 265:4"></td>
+            <td class="discordian-time">265:4</td>
+        </tr>
+</tbody>
+</table>
+</div>
 
 <h2><span class="mw-headline">References</span></h2>
 <div class="reflist" style="list-style-type: decimal;">

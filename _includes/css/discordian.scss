@@ -53,6 +53,7 @@ $link_text: #c0c0c0;
     .thud-time,
     .non-thud-time,
     .universal-vs-local,
+    .discordian-to-std,
     .holydays-apostle,
     .holydays-season,
     .holydays-sttibsday {
@@ -64,27 +65,91 @@ $link_text: #c0c0c0;
     .thud-time,
     .non-thud-time,
     .universal-vs-local,
+    .discordian-to-std,
     .holydays-sttibsday {
         padding: 1em 0 0 0;
     }
 }
 
 .discordian-clock {
+    table {
+        padding: 0.1em 0 0.1em 0;
+    }
+
     .discordian-day-title {
         padding-top: 0;
     }
 
-    .discordian-to-standard-table {
-        margin: 0 auto 0 auto;
+    .discordian-to-std-scale,
+    .discordian-to-std-units {
 
         th h2 {
             font-size: 1.5em;
             margin-bottom: 0.5em;
         }
+    }
 
-        .standard-discordian-divider {
-            width: 3em;
+    .discordian-to-std-units {
+
+        .discordian-std-divider {
+            width: 2em;
             text-align: center;
+        }
+    }
+
+    .discordian-to-std-scale {
+        margin: 3em auto 0 auto;
+
+        .discordian-std-divider {
+            width: 5em;
+        }
+
+        .discordian-time-title,
+        .std-time-title {
+            display: inline-block;
+        }
+
+        .std-time-title {
+            text-align: left;
+        }
+
+        .discordian-time-title {
+            text-align: right;
+            float: right;
+        }
+
+        .discordian-time {
+            text-align: right;
+            padding: 0 0.5em 0 1em;
+        }
+
+        .std-time {
+            text-align: left;
+            padding: 0 1em 0 0.5em;
+        }
+
+        tr.thud-minute td.discordian-std-divider,
+        tr.minute td.discordian-std-divider {
+            height: 0.1875em;
+        }
+
+        td {
+            background-color: #606060;
+            vertical-align: top;
+        }
+
+        tr.thud-minute td {
+            background-color: #686868;
+        }
+
+        tr.thud-minute td,
+        tr.minute-on-the-hour td,
+        tr.minute td.discordian-std-divider {
+            border-top: 1px solid #484848;
+        }
+
+        tr.minute-final td.discordian-std-divider {
+            background-color: transparent;
         }
     }
 }
@@ -123,25 +188,6 @@ $link_text: #c0c0c0;
             font-size: 1.15em;
             margin-bottom: 0.25em;
         }
-
-        td.season-chs {}
-        td.season-dsc {}
-        td.season-cfn {}
-        td.season-bcy {}
-        td.season-afm {}
-
-        td.month-jan {}
-        td.month-feb {}
-        td.month-mar {}
-        td.month-apr {}
-        td.month-may {}
-        td.month-jun {}
-        td.month-jul {}
-        td.month-aug {}
-        td.month-sep {}
-        td.month-oct {}
-        td.month-nov {}
-        td.month-dec {}
 
         td.month-title {
             text-align: right;
