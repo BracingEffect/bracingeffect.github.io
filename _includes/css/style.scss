@@ -7,7 +7,6 @@ $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 $software_background: #f7f8f9;
 $images_path: "images/";
-$fonts_path: "fonts/";
 
 $normal_text: #f0f0f0;
 $subtle_text: #a0a0a0;
@@ -74,16 +73,6 @@ $contact_background_color: #f0f0f0;
     -khtml-transform: $x;
     -ms-transform: $x;
     transform: $x;
-}
-
-/****************************************
- * Web Fonts
- ****************************************/
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(#{$fonts_path}Lato-Light.ttf) format('truetype');
 }
 
 /****************************************
@@ -346,22 +335,22 @@ $content_margin_right: 48;
 
  #reference {
     background-color: #000;
-    padding-bottom: 5em;
     overflow-x: hidden;
+    padding-top: 6em;
 
     .hr {
         background-color: #000;
         border-top: 1px #666 solid;
         margin: 0 auto 0 auto;
-        padding-bottom: 6em;
-        margin-top: 6em;
+        padding-bottom: 5em;
         width: 100px;
     }
 
     #discordian-calendar,
     #discordian-clock {
-        max-width: 736px;
+        max-width: 768px;
         margin: 0 auto 0 auto;
+        padding-bottom: 1em;
     }
 }
 

@@ -1,0 +1,13 @@
+exclude: [
+    LICENSE,
+    Resources,
+    Gemfile,
+    Gemfile.lock,
+    fonts,
+    images,
+    CNAME,
+    index.html,
+    README.md]
+destination: _standalone_site
+sass:
+    style: :compressed

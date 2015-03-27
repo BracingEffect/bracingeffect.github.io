@@ -1,0 +1,13 @@
+
+/****************************************
+ * Web Fonts
+ ****************************************/
+
+$fonts_path: "fonts/";
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(#{$fonts_path}Lato-Light.ttf) format('truetype');
+}

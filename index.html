@@ -31,6 +31,10 @@
 {{ reset_css | scssify }}
     </style>
     <style type="text/css">
+{% capture fonts_css %}{% include css/fonts.scss %}{% endcapture %}
+{{ fonts_css | scssify }}
+    </style>
+    <style type="text/css">
 {% capture owl_carousel_css %}{% include owl-carousel/owl.carousel.css %}{% endcapture %}
 {{ owl_carousel_css | scssify }}
     </style>
@@ -118,11 +122,11 @@
     </div>
 </div>
 <div id="reference">
-        <div class="hr"></div>
+    <div class="hr"></div>
     <div id="discordian-calendar">
         {% include discordian_calendar.html %}
     </div>
-        <div class="hr"></div>
+    <div class="hr"></div>
     <div id="discordian-clock">
         {% include discordian_clock.html %}
     </div>
