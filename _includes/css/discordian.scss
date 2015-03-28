@@ -46,6 +46,18 @@ $link_text: #c0c0c0;
         padding-left: 1.5em;
     }
 
+    .thud-time-list,
+    .non-thud-time-list,
+    .season-list,
+    .day-of-week-list,
+    .holyday-list {
+        padding: 0.5em 0 0 2em;
+
+        li {
+            padding: 0 0 0.5em 0;
+        }
+    }
+
     .holydays-apostle,
     .holydays-season {
         width: 49%;
@@ -88,10 +100,15 @@ $link_text: #c0c0c0;
     }
 
     .discordian-to-std-units {
+        margin: 0.5em 0 0 0;
 
         .discordian-std-divider {
             width: 2em;
             text-align: center;
+        }
+
+        td {
+            padding: 0 0 0.5em 0;
         }
     }
 
@@ -158,12 +175,9 @@ $link_text: #c0c0c0;
     .day-of-week-list,
     .holyday-list {
         list-style: lower-roman;
-        padding: 0.5em 0 0 2em;
 
         li {
             color: $subtle_text;
-            padding: 0 0 0.5em 0;
-
             span {
                 color: $normal_text;
             }
