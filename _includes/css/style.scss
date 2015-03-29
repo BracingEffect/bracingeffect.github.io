@@ -359,7 +359,7 @@ $content_margin_right: 48;
  ****************************************/
 #contact,
 #contact-scroll-spacer {
-    padding-top: 16em;
+    padding-top: 18em;
 }
 
 #contact-scroll-spacer {
@@ -416,6 +416,7 @@ $content_margin_right: 48;
             #bracingeffect-logo-container {
                 text-align: center;
                 white-space: nowrap;
+                margin-bottom: 0.75em;
 
                 #bracingeffect-logo {
                     background-position: 50% 50%;
@@ -443,9 +444,9 @@ $content_margin_right: 48;
                 }
             }
 
-            .email {
+            .contact-method {
                 font-size: 1.25em;
-                margin-top: 1em;
+                margin-top: 0.5em;
                 width: 100%;
 
                 a {
