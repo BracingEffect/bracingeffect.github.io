@@ -198,6 +198,7 @@ $iphone_bezel_width: 24;
 $min_height: $iphone_height + $margin_top + $margin_bottom;
 $content_percent: 55;
 $content_margin_right: 48;
+$content_margin_left: 215;
 
 #chaos {
     overflow: hidden;
@@ -220,9 +221,13 @@ $content_margin_right: 48;
             right: #{$content_margin_right}px;
         }
 
+        .float-left-of-watch {
+            right: #{$content_margin_left}px;
+        }
+
         #header {
             position: absolute;
-            top: #{$iphone_bezel_height}px;
+            top: 20px;
             white-space: nowrap;
             z-index: 1;
 
@@ -247,9 +252,8 @@ $content_margin_right: 48;
             color: $normal_text;
             font-size: 20px;
             position: absolute;
-            top: #{$iphone_bezel_height}px;
+            top: 20px;
             margin-top: 5.15em;
-            max-width: 12em;
             width: (100 - (100 * 1.5 * $content_margin_right / $iphone_width)) * 1%;
             white-space: normal;
 
@@ -290,6 +294,15 @@ $content_margin_right: 48;
             position: absolute;
             top: #{$iphone_height - $iphone_bezel_height + 10}px;
         }
+    }
+
+    #watch {
+        position: absolute;
+        top: 300px;
+        left: -225px;
+        width: 276px;
+        height: 475px;
+        z-index: 200;
     }
 
     #iphone {
@@ -546,6 +559,7 @@ $content_margin_right: 48;
 }
 
 #iphone{background-image:url(#{$images_path}iphone.png)}
+#watch{background-image:url(#{$images_path}watch.png)}
 #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
 #appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
 #bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo.png)}
@@ -566,6 +580,7 @@ only screen and (min-device-pixel-ratio:2),
 only screen and (min-resolution:192dpi),
 only screen and (min-resolution:2dppx) {
     #iphone{background-image:url(#{$images_path}iphone_2x.png)}
+    #watch{background-image:url(#{$images_path}watch_2x.png)}
     #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
     #appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
     #bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo_2x.png)}
