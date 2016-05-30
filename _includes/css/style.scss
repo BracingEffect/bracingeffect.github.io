@@ -39,7 +39,6 @@ $font_family:
   src: local('Luckiest Guy'), local('LuckiestGuy'), url(#{$fonts_path}LuckiestGuy.ttf) format('truetype');
 }
 
-
 /****************************************
  * Sections
  ****************************************/
@@ -48,7 +47,7 @@ $font_family:
 
     font-size: 10px;
 
-    min-height: 30%;
+    min-height: 45%;
     position: relative;
 
     overflow-x: hidden;
@@ -164,8 +163,8 @@ $font_family:
                 font-size: 6.4em;
 
                 .bracingeffect-title {
-                    height: 64px;
-                    width: 340px;
+                    height: 1em;
+                    width: 5.3125em;
 
                     display: inline-block;
                 }
