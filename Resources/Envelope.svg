@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="150"
+   height="100"
+   viewBox="0 0 150 100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Envelope.svg"
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+   inkscape:export-xdpi="54"
+   inkscape:export-ydpi="54">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#808080"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="201.74501"
+     inkscape:cy="17.112012"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4136"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Light"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-952.36221)"
+     style="display:none">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,0 L 75,75 L 150,0 L 0,0 Z M 0,12 L 0,88 L 38,50 L 0,12 Z m 150,0 l -38,38 l 38,38 l 0,-76 z M 44,56 L 0,100 l 150,0 L 106,56 L 75,87 L 44,56 Z"
+       transform="translate(0,952.36221)"
+       id="path4323"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/envelope.png"
+       inkscape:export-xdpi="19.799999"
+       inkscape:export-ydpi="19.799999"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     transform="translate(0,-952.36221)"
+     id="g4134"
+     inkscape:groupmode="layer"
+     inkscape:label="Dark"
+     style="display:none">
+    <path
+       inkscape:export-ydpi="19.799999"
+       inkscape:export-xdpi="19.799999"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/envelope-dark.png"
+       id="path4136"
+       transform="translate(0,952.36221)"
+       d="M 0,0 L 75,75 L 150,0 L 0,0 Z M 0,12 L 0,88 L 38,50 L 0,12 Z m 150,0 l -38,38 l 38,38 l 0,-76 z M 44,56 L 0,100 l 150,0 L 106,56 L 75,87 L 44,56 Z"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     style="display:inline"
+     transform="translate(0,-952.36221)"
+     id="g4136"
+     inkscape:groupmode="layer"
+     inkscape:label="Shadowed">
+    <path
+       sodipodi:nodetypes="cccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4157"
+       d="m 150,962.36222 l -140,0 l 70,69.99998 z M 10,973.163 l 0,68.3984 l 34.199219,-34.1992 z m 140,0 l -34.19922,34.1992 L 150,1041.5614 Z m 0,79.1992 l -39.59961,-39.5996 L 80,1043.1622 L 49.599609,1012.7626 L 10,1052.3622 Z"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.3"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+       inkscape:export-xdpi="39.600002"
+       inkscape:export-ydpi="39.600002" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 140,0 L 0,0 L 70,69.99999 Z M 0,10.800781 L 0,79.199219 L 34.199219,45 Z m 140,0 L 105.80078,45 L 140,79.199219 Z M 140,90 L 100.40039,50.400391 L 70,80.79999 L 39.599609,50.400391 L 0,90 Z"
+       transform="translate(0,952.36221)"
+       id="path4138"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccc"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+       inkscape:export-xdpi="39.600002"
+       inkscape:export-ydpi="39.600002" />
+  </g>
+</svg>

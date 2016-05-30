@@ -1,7 +1,7 @@
 
 Gemfile.lock
 _site
-_standalone_site
+.jekyll-metadata
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

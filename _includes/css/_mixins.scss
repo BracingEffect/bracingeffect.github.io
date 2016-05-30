@@ -1,0 +1,78 @@
+
+// SASS mixins
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin text-shadow($shadows...) {
+    -webkit-text-shadow: $shadows;
+    -moz-text-shadow: $shadows;
+    -o-text-shadow: $shadows;
+    text-shadow: $shadows;
+}
+
+@mixin box-shadow($shadows...) {
+    -webkit-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    -o-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+
+@mixin background-size($sizes...) {
+    -webkit-background-size: $sizes;
+    -moz-background-size: $sizes;
+    -o-background-size: $sizes;
+    background-size: $sizes;
+}
+
+@mixin border-radius($radius...) {
+    -moz-border-radius: $radius;
+    -khtml-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin translateZ($z) {
+    -webkit-transform: translateZ(#{$z}px);
+    -moz-transform: translateZ(#{$z}px);
+    -o-transform: translateZ(#{$z}px);
+    -khtml-transform: translateZ(#{$z}px);
+    -ms-transform: translateZ(#{$z}px);
+    transform: translateZ(#{$z}px);
+}
+
+@mixin translateZScale($z) {
+    $scale: 1 + ($z * -1) / $perspective;
+    -webkit-transform: translateZ(#{$z}px) scale($scale);
+    -moz-transform: translateZ(#{$z}px) scale($scale);
+    -o-transform: translateZ(#{$z}px) scale($scale);
+    -khtml-transform: translateZ(#{$z}px) scale($scale);
+    -ms-transform: translateZ(#{$z}px) scale($scale);
+    transform: translateZ(#{$z}px) scale($scale);
+}
+
+@mixin transform($x...) {
+    -webkit-transform: $x;
+    -moz-transform: $x;
+    -o-transform: $x;
+    -khtml-transform: $x;
+    -ms-transform: $x;
+    transform: $x;
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}

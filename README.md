@@ -1,2 +1,5 @@
-# Bracing Effect
-Website for bracingeffect.com
+Bracing Effect Website
+======================
+
+Source code for Bracing Effect website.
+

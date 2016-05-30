@@ -1,10 +1,10 @@
-exclude: [
-    LICENSE,
-    Resources,
-    Gemfile,
-    Gemfile.lock,
-    calendar.html,
-    clock.html,
-    container.html]
+exclude: [LICENSE, Resources, Gemfile, Gemfile.lock]
 sass:
-    style: :compressed
+
+    # loading path from site root
+    # default to _sass
+    sass_dir: _includes/css
+
+    # style : nested (default), compact, compressed, expanded
+    #         :nested, :compact, :compressed, :expanded also works
+    style: :expanded

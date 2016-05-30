@@ -6,149 +6,99 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="description" content="Chaos Clock, timekeeping for Discordians">
-    <meta name="keywords" content="iOS,iPhone,iPad,App,Apps,Discordian,Clock,Calendar,Chaos,Principia Discordia,Eris,Holyday,Discordianism,Church of the SubGenius">
-    <meta id="viewport" name="viewport">
-    <script>
-        (function(doc) {
-            if (window.matchMedia) {
-                var viewport = document.getElementById('viewport');
-                if(window.matchMedia('(max-device-width: 736px)').matches) {
-                    viewport.setAttribute('content', 'width=736');
-                } else {
-                    viewport.setAttribute('content', 'width=device-width, initial-scale=1');
-                }
-            }
-        }(document));
-    </script>
+    <meta name="description" content="Jurbly iOS Game">
+    <meta name="keywords" content="iOS,iPhone,iPad,App,Apps,Jurbly,Chaos Clock,Parsnip">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Bracing Effect</title>
 
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Bracing Effect"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="images\mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="images\mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="images\mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="images\mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="images\mstile-310x310.png" />
 
     <style type="text/css">
 {% capture reset_css %}{% include css/reset.scss %}{% endcapture %}
 {{ reset_css | scssify }}
     </style>
     <style type="text/css">
-{% capture fonts_css %}{% include css/fonts.scss %}{% endcapture %}
-{{ fonts_css | scssify }}
-    </style>
-    <style type="text/css">
-{% capture owl_carousel_css %}{% include owl-carousel/owl.carousel.css %}{% endcapture %}
-{{ owl_carousel_css | scssify }}
-    </style>
-    <style type="text/css">
-{% capture owl_theme_css %}{% include owl-carousel/owl.theme.css %}{% endcapture %}
-{{ owl_theme_css | scssify }}
-    </style>
-    <style type="text/css">
-{% include css/bootstrap.min.css %}
-    </style>
-    <style type="text/css">
 {% capture style_css %}{% include css/style.scss %}{% endcapture %}
 {{ style_css | scssify }}
-    </style>
-    <style type="text/css">
-{% capture discordian_css %}{% include css/discordian.scss %}{% endcapture %}
-{{ discordian_css | scssify }}
     </style>
 
 </head>
 <body>
-<div id="contact">
-    <div class="content">
-        <div id="bracingeffect-column">
-            <div id="bracingeffect-logo-container">
-                <a id="bracingeffect-root-link" href="http://bracingeffect.com">
-                    <div id="bracingeffect-logo" class="background-image">
-                        <span class="spacer"></span>
-                    </div>
-                    <div id="bracingeffect-text">
-                        <h1 id="bracing-text">Bracing</h1>
-                        <h1 id="effect-text">Effect</h1>
-                    </div>
-                </a>
-            </div>
-            <div class="contact-method">
-                Contact us at <a id="bracingeffect-email-link" href="mailto:support@bracingeffect.com">support@bracingeffect.com</a>
-            </div>
-            <div class="contact-method">
-                Report bugs/request features on <a id="bitbucket-issue-link" href="https://bitbucket.org/BracingEffect/chaosclock/issues/new">Bitbucket</a>
-            </div>
-        </div>
-        <div id="parsnip-column">
-            <div id="parsnip-logo-container">
-                <a id="parsnip-link" href="http://bracingeffect.com/Parsnip/">
-                    <div id="parsnip-logo" class="background-image">
-                        <span class="spacer"></span>
-                    </div>
-                    <h1 id="parsnip-text">PARSNIP</h1>
-                </a>
-            </div>
-            <div class="parsnip-description">
-                Everyday OCR, for iPhone, iPad, and iPod Touch
-            </div>
-        </div>
-    </div>
-</div>
-<div id="chaos" class="slide ratio-4x3">
-    <span class="spacer"></span>
-    <div class="content">
-        <div id="header" class="float-right">
-            <div id="chaosclock-logo" class="background-image"><span class="spacer"></span></div>
-            <h1 id="title">Chaos Clock</h1>
-        </div>
-        <div id="text" class="float-right">
-            <a id="internal-calendar-link" href="#discordian-calendar">Date</a> &
-            <a id="internal-clock-link" href="#discordian-clock">time</a> measurement
-            for <a id="discordianism-wikipedia-link" href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a>
-        </div>
-        <div id="badge-container" class="float-left-of-watch">
-            <a id="chaosclock-itunes-link" href="https://itunes.apple.com/us/app/chaos-clock/id977164677?ls=1&mt=8">
-                <span class="accessibility-text">Download on the App Store</span>
-                <div id="appstore-badge" class="background-image"><span class="spacer"></span></div></a>
-        </div>
-        <a id="internal-contact-link" class="float-left-of-watch" href="#">Contact us</a>
-    </div>
-    <div id="iphone" class="background-image">
-        <div id="slides">
-            <div id="screenshot01" class="screenshot background-image"></div>
-            <div id="screenshot02" class="screenshot background-image"></div>
-            <div id="screenshot03" class="screenshot background-image"></div>
-            <div id="screenshot04" class="screenshot background-image"></div>
-            <div id="screenshot05" class="screenshot background-image"></div>
-        </div>
-        <div id="watch" class="background-image"></div>
-    </div>
-</div>
-<div id="reference">
-    <div class="hr"></div>
-    <div id="discordian-calendar">
-        {% include discordian_calendar.html %}
-    </div>
-    <div class="hr"></div>
-    <div id="discordian-clock">
-        {% include discordian_clock.html %}
-    </div>
-</div>
-<div id="contact-scroll-spacer"></div>
 
-<script type="text/javascript">
-{% include js/jquery.min.js %}
-</script>
-<script type="text/javascript">
-{% include js/jquery.easing.js %}
-</script>
-<script type="text/javascript">
-{% include js/bootstrap.min.js %}
-</script>
-<script type="text/javascript">
-{% include owl-carousel/owl.carousel.min.js %}
-</script>
-<script type="text/javascript">
-{% include js/main.js %}
-</script>
+<div class="bracingeffect section section-first">
+    <div class="container">
+        <div class="logo bracingeffect-logo background-image"></div>
+        <h1 class="title"><span class="text"><div class="bracingeffect-title background-image"></div></span></h1>
+        <div class="description">
+            <span class="text">
+                Apps & games for iOS
+                <a href="mailto:support@bracingeffect.com" aria-label="Email us" class="email">
+                    <div class="envelope background-image"></div>
+                </a>
+            </span>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="jurbly section">
+    <div class="container">
+        <h1 class="title">
+            <a href="/Jurbly/"><span class="text">Jurbly</span><span class="arrow">&rsaquo;</span></a>
+            <div class="clear"></div>
+        </h1>
+        <div class="description"><span class="text">Color matching game of skill</span></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="chaosclock section">
+    <div class="container">
+        <h1 class="title">
+            <a href="/ChaosClock/"><span class="text">Chaos Clock</span><span class="arrow">&rsaquo;</span></a>
+            <div class="clear"></div>
+        </h1>
+        <div class="description">
+            <span class="text">Date & time</a> measurement for <a href="http://en.wikipedia.org/wiki/Discordianism">Discordians</a></span>
+        </div>
+        <div class="logo chaosclock-logo background-image"></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="parsnip section section-last">
+    <div class="container">
+        <h1 class="title">
+            <a href="/Parsnip/"><span class="text">PARSNIP</span><span class="arrow">&rsaquo;</span></a>
+            <div class="clear"></div>
+        </h1>
+        <div class="description"><span class="text">Everyday OCR for iPhone, iPad & iPod Touch</span></div>
+        <div class="logo parsnip-logo background-image"></div>
+        <div class="clear"></div>
+    </div>
+    <a class="background-copyright" href="http://www.flickr.com/photos/wwarby/">Photo © 2014, William Warby</a>
+</div>
 
 {% include google_analytics.html %}
 
