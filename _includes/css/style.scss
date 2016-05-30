@@ -62,7 +62,7 @@ $font_family:
         position: relative;
 
         max-width: 100%;
-        width: 768px;
+        width: 640px;
 
         .background-image {
             max-width: 100%;
@@ -180,6 +180,7 @@ $font_family:
 
 .jurbly {
     background-color: $jurbly_pink;
+    @include gradient-vertical($start-color: $jurbly_pink, $end-color: lighten($jurbly_pink, 5%));
 
     .container {
         .title {
@@ -199,6 +200,7 @@ $font_family:
 
 .chaosclock {
     background-color: #000;
+    @include gradient-vertical($start-color: #000, $end-color: #202020);
 
     .container {
         .chaosclock-logo {
@@ -391,7 +393,7 @@ only screen and (min-resolution:2dppx) {
  ****************************************/
 
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
 
     .section {
         .container {
