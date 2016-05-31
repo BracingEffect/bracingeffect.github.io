@@ -12,10 +12,8 @@ $dark_parsnip_green: #309000; // rgb(48,144,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 
-$background_color: #e0e0e0;
-$normal_text: #000;
-$subtle_text: #606060;
-$link_text: #808080;
+$background_color: #f0f0f0;
+$normal_text: #fff;
 
 $font_family:
     system, -apple-system, BlinkMacSystemFont, "San Francisco",
@@ -47,12 +45,11 @@ $font_family:
 
 .container {
     margin: 0 auto 0 auto;
-    padding: 10em 2em 10em 2em;
 
     position: relative;
 
     max-width: 100%;
-    width: 640px;
+    width: 768px;
 
     .background-image {
         max-width: 100%;
@@ -105,23 +102,29 @@ $font_family:
     background-color: $bracing_blue;
     @include gradient-vertical($start-color: $bracing_blue, $end-color: darken(#7ec0ee, 10%));
 
-    color: #fff;
-    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+    .container {
+        padding: 10em 2em 10em 2em;
 
-    .bracingeffect {
-        text-align: center;
+        .bracingeffect {
+            text-align: center;
 
-        .title {
-            .text {
-                .bracingeffect-title {
-                    height: 7.6em;
-                    width: 40.3em;
+            .title {
+                .text {
+                    .bracingeffect-title {
+                        height: 7.6em;
+                        width: 40.3em;
 
-                    display: inline-block;
+                        display: inline-block;
+                    }
                 }
             }
         }
     }
+}
+
+.hero, .apps .section {
+    color: #fff;
+    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 
@@ -129,27 +132,60 @@ $font_family:
  * Apps
  ****************************************/
 
+$app_padding_top: 4em;
+$app_padding_left: 2em;
+
 .apps {
     background-color: $background_color;
     position: relative;
     overflow-x: hidden;
     @include box-shadow(0 0 3em rgba(0, 0, 0, 0.5));
-}
 
-.section {
-    position: relative;
-    padding-bottom: 10em;
+    .container {
+        padding: 5em 2em 5em 2em;
+    }
+
+    .section {
+        position: relative;
+
+        border-radius: 0.8em;
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: #888;
+        border-left-color: #888;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+
+        margin-bottom: 5em;
+        padding: $app_padding_top $app_padding_left;
+
+        min-height: 20em;
+
+        overflow: hidden;
+    }
 }
 
 .chaosclock, .parsnip {
     .logo {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: $app_padding_left;
     }
 
     .title, .description {
         margin-left: 12em;
+    }
+}
+
+.chaosclock {
+    .logo {
+        margin-top: -5em;
+    }
+}
+
+.parsnip {
+    .logo {
+        margin-top: -8.1em;
     }
 }
 
@@ -159,6 +195,9 @@ $font_family:
  ****************************************/
 
 .jurbly {
+    background-color: $jurbly_pink;
+    @include gradient-vertical($start-color: $jurbly_pink, $end-color: lighten($jurbly_pink, 10%));
+
     .title {
         .text {
             font-family: 'Luckiest Guy', $font_family;
@@ -175,10 +214,12 @@ $font_family:
  ****************************************/
 
 .chaosclock {
+    background-color: #000;
+    @include gradient-vertical($start-color: #000, $end-color: #333);
+
     .chaosclock-logo {
         height: 10em;
         width: 10em;
-        margin-top: 0.75em
     }
 
     .title {
@@ -189,6 +230,12 @@ $font_family:
             @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
         }
     }
+
+    .description {
+        a {
+            color: #606060;
+        }
+    }
 }
 
 
@@ -197,8 +244,11 @@ $font_family:
  ****************************************/
 
 .parsnip {
+    background-color: #749C14;
+    @include gradient-vertical($start-color: $dark_parsnip_green, $end-color: #749C14);
+
     .parsnip-logo {
-        height: 15.9em;
+        height: 16.2em;
         width: 10em;
     }
 
@@ -220,7 +270,6 @@ $font_family:
     text-align: center;
 
     .email {
-        color: #303030;
         display: inline-block;
         font-size: 2.2em;
         text-decoration: none;
@@ -235,6 +284,10 @@ $font_family:
     .website-copyright {
         font-size: 1.2em;
         margin-top: 2em;
+    }
+
+    .email, .website-copyright {
+        color: #303030;
     }
 }
 
@@ -269,7 +322,6 @@ em {
 }
 
 a {
-    color: $link_text;
     text-decoration: underline;
 }
 
@@ -287,10 +339,6 @@ a:hover {
 
 .nowrap {
     white-space: nowrap
-}
-
-.subtle {
-    color: $subtle_text;
 }
 
 .clear {
@@ -367,40 +415,61 @@ only screen and (min-resolution:2dppx) {
  ****************************************/
 
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
-    .container {
-        padding-left: 2.6042%;
-        padding-right: 2.6042%;
+    .hero, .apps {
+        .container, .section {
+            padding-left: 2.6042%;
+            padding-right: 2.6042%;
+        }
     }
 }
 
 @media (max-width: 600px) {
 
-    .bracingeffect {
-        .bracingeffect-logo {
-            font-size: 8px;
+    .chaosclock {
+        .title {
+            .text {
+                font-size: 5.25em;
+            }
+        }
+    }
+
+    .apps {
+        .container {
+            .description {
+                .text {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+
+    .chaosclock {
+        .title {
+            .text {
+                font-size: 4.875em;
+            }
+        }
+    }
+
+    .parsnip {
+        .title {
+            .text {
+                font-size: 6.5em;
+            }
         }
     }
 }
 
 @media (max-width: 500px) {
 
-    .chaosclock {
+    .chaosclock, .parsnip {
         .logo {
             margin: 3em auto 0 auto;
-        }
-
-        .title {
-            .text {
-                font-size: 5.5em;
-            }
-        }
-    }
-
-    .parsnip {
-        .logo {
-            margin: 1em auto 0 auto;
         }
     }
 
@@ -416,7 +485,7 @@ only screen and (min-resolution:2dppx) {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
     .jurbly {
         .title {

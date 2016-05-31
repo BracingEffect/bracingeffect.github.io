@@ -15,8 +15,8 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="ChaosClock.svg"
-   inkscape:export-xdpi="17.58"
-   inkscape:export-ydpi="17.58"
+   inkscape:export-xdpi="17.4"
+   inkscape:export-ydpi="17.4"
    inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/chaosclock-logo_2x.png">
   <defs
      id="defs4" />
@@ -28,10 +28,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.31689453"
-     inkscape:cx="716.80472"
+     inkscape:cx="-122.59128"
      inkscape:cy="576.04373"
      inkscape:document-units="px"
-     inkscape:current-layer="g4202"
+     inkscape:current-layer="g4191"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -197,7 +197,7 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="Background Clipped"
      id="g4193"
      inkscape:groupmode="layer">
@@ -256,7 +256,7 @@
      inkscape:groupmode="layer"
      id="g4202"
      inkscape:label="Background With Shadow"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:connector-curvature="0"
        style="color:#000000;display:none;overflow:visible;visibility:visible;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
@@ -358,13 +358,13 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      transform="translate(50.25,211.52169)"
      id="g4191"
      inkscape:groupmode="layer"
      inkscape:label="BORDER WHITE">
     <path
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#ffffff;stroke-width:10.343;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4193"
        d="m 301.95446,-211.52169 l 319.59108,0 c 101.4156,0 152.12339,0 206.7084,17.25959 c 59.59748,21.69173 106.54481,68.63899 128.23654,128.236542 C 973.75,-11.44076 973.75,39.267072 973.75,140.68273 l 0,319.59116 c 0,101.41566 0,152.12349 -17.25952,206.70829 c -21.69173,59.59758 -68.63906,106.54477 -128.23654,128.23654 c -54.58501,17.25959 -105.2928,17.25959 -206.7084,17.25959 l -319.59108,0 c -101.4156,0 -152.12339,0 -206.708396,-17.25959 C 35.648581,773.52695 -11.298747,726.57976 -32.99048,666.98218 C -50.25,612.39738 -50.25,561.68955 -50.25,460.27389 l 0,-319.59116 c 0,-101.415658 0,-152.12349 17.25952,-206.708254 C -11.298747,-125.62307 35.648581,-172.57037 95.246064,-194.2621 c 54.585006,-17.25959 105.292796,-17.25959 206.708396,-17.25959 l 0,0"
        inkscape:connector-curvature="0" />

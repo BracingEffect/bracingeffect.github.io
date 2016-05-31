@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Envelope.svg"
-   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
-   inkscape:export-xdpi="54"
-   inkscape:export-ydpi="54">
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope.png"
+   inkscape:export-xdpi="19.799999"
+   inkscape:export-ydpi="19.799999">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="201.74501"
-     inkscape:cy="17.112012"
+     inkscape:cx="232.71095"
+     inkscape:cy="-61.752993"
      inkscape:document-units="px"
      inkscape:current-layer="g4136"
      showgrid="false"
@@ -103,11 +103,11 @@
      inkscape:groupmode="layer"
      inkscape:label="Shadowed">
     <path
-       sodipodi:nodetypes="cccccccccccccccccc"
+       sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path4157"
-       d="m 150,962.36222 l -140,0 l 70,69.99998 z M 10,973.163 l 0,68.3984 l 34.199219,-34.1992 z m 140,0 l -34.19922,34.1992 L 150,1041.5614 Z m 0,79.1992 l -39.59961,-39.5996 L 80,1043.1622 L 49.599609,1012.7626 L 10,1052.3622 Z"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.3"
+       d="M 10.000011,962.36222 L 10,1052.3622 l 140,0 l 0,-89.99998 z"
+       style="opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
        inkscape:export-xdpi="39.600002"
        inkscape:export-ydpi="39.600002" />
