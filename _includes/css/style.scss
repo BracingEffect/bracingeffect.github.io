@@ -12,9 +12,10 @@ $dark_parsnip_green: #309000; // rgb(48,144,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 
-$normal_text: #fff;
-$subtle_text: #fff;
-$link_text: #fff;
+$background_color: #e0e0e0;
+$normal_text: #000;
+$subtle_text: #606060;
+$link_text: #808080;
 
 $font_family:
     system, -apple-system, BlinkMacSystemFont, "San Francisco",
@@ -39,132 +40,82 @@ $font_family:
   src: local('Luckiest Guy'), local('LuckiestGuy'), url(#{$fonts_path}LuckiestGuy.ttf) format('truetype');
 }
 
+
 /****************************************
- * Sections
+ * Defaults
  ****************************************/
 
-.section {
+.container {
+    margin: 0 auto 0 auto;
+    padding: 10em 2em 10em 2em;
 
-    font-size: 10px;
-
-    min-height: 45%;
     position: relative;
 
-    overflow-x: hidden;
+    max-width: 100%;
+    width: 640px;
 
-    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
-
-    .container {
-
-        margin: 0 auto 0 auto;
-        padding: 6em 2em 10em 2em;
-
-        position: relative;
-
+    .background-image {
         max-width: 100%;
-        width: 640px;
+    }
 
-        .background-image {
-            max-width: 100%;
-        }
+    .logo {
+        display: inline-block;
+    }
 
-        .logo {
-            display: inline-block;
-        }
+    .title {
+        max-width: 100%;
 
-        .title {
-            max-width: 100%;
-
-            a {
-                text-decoration: none;
-                white-space: nowrap;
-
-                .text {
-                    line-height: 60px;
-                    float: left;
-                    @include text-shadow(0.05em 0.05em 0 rgba(0, 0, 0, 0.3));
-                }
-
-                .arrow {
-                    line-height: 50px;
-                    float: right;
-                    font-size: 7em;
-                    font-weight: 200;
-                    @include text-shadow(0.05em 0.05em 0 rgba(0, 0, 0, 0.3));
-                }
-            }
-        }
-
-        .description {
-            padding-top: 2em;
+        a {
+            color: $normal_text;
+            display: block;
+            text-decoration: none;
+            white-space: nowrap;
 
             .text {
-                font-size: 2.2em;
-                line-height: 1.5em;
+                line-height: 60px;
+                float: left;
+            }
+
+            .arrow {
+                line-height: 50px;
+                float: right;
+                font-size: 7em;
+                font-weight: 300;
+                @include text-shadow(0.04em 0.04em 0 rgba(0, 0, 0, 0.3));
             }
         }
     }
-}
 
-.jurbly, .chaosclock, .parsnip {
-    @include box-shadow(0 0 3em rgba(0, 0, 0, 0.5));
-}
+    .description {
+        padding-top: 2em;
 
-
-.chaosclock, .parsnip {
-
-    .container {
-        .logo {
-            position: absolute;
-            top: 6em;
-            left: 2em;
-        }
-
-        .title, .description {
-            margin-left: 12em;
+        .text {
+            font-size: 2.2em;
+            line-height: 1.5em;
         }
     }
 }
 
 
 /****************************************
- * Bracing Effect
+ * Hero
  ****************************************/
 
-.bracingeffect {
+.hero {
     background-color: $bracing_blue;
     @include gradient-vertical($start-color: $bracing_blue, $end-color: darken(#7ec0ee, 10%));
 
-    .bracingeffect-logo {
-        float: left;
+    color: #fff;
+    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 
-        margin: 0 -2em -3em 0;
+    .bracingeffect {
+        text-align: center;
 
-        height: 16em;
-        width: 18em;
-    }
-
-    .email {
-        display: inline-block;
-        font-size: 1em;
-        margin-left: 0.5em;
-        text-decoration: none;
-        vertical-align: baseline;
-
-        .envelope {
-            height: 1em;
-            width: 1.5em;
-        }
-    }
-
-    .container {
         .title {
             .text {
-                font-size: 6.4em;
-
                 .bracingeffect-title {
-                    height: 1em;
-                    width: 5.3125em;
+                    height: 7.6em;
+                    width: 40.3em;
 
                     display: inline-block;
                 }
@@ -175,20 +126,45 @@ $font_family:
 
 
 /****************************************
+ * Apps
+ ****************************************/
+
+.apps {
+    background-color: $background_color;
+    position: relative;
+    overflow-x: hidden;
+    @include box-shadow(0 0 3em rgba(0, 0, 0, 0.5));
+}
+
+.section {
+    position: relative;
+    padding-bottom: 10em;
+}
+
+.chaosclock, .parsnip {
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .title, .description {
+        margin-left: 12em;
+    }
+}
+
+
+/****************************************
  * Jurbly
  ****************************************/
 
 .jurbly {
-    background-color: $jurbly_pink;
-    @include gradient-vertical($start-color: $jurbly_pink, $end-color: lighten($jurbly_pink, 5%));
-
-    .container {
-        .title {
-            .text {
-                font-family: 'Luckiest Guy', $font_family;
-                font-size: 9.6em;
-                font-variant: small-caps;
-            }
+    .title {
+        .text {
+            font-family: 'Luckiest Guy', $font_family;
+            font-size: 9.6em;
+            font-variant: small-caps;
+            @include text-shadow(0.05em 0.05em 0 rgba(0, 0, 0, 0.3));
         }
     }
 }
@@ -199,28 +175,18 @@ $font_family:
  ****************************************/
 
 .chaosclock {
-    background-color: #000;
-    @include gradient-vertical($start-color: #000, $end-color: #202020);
+    .chaosclock-logo {
+        height: 10em;
+        width: 10em;
+        margin-top: 0.75em
+    }
 
-    .container {
-        .chaosclock-logo {
-            height: 10em;
-            width: 10em;
-            margin-top: 0.75em
-        }
-
-        .title {
-            .text {
-                font-size: 6em;
-                font-variant: small-caps;
-                font-weight: 100;
-            }
-        }
-
-        .description {
-            a {
-                color: #a0a0a0;
-            }
+    .title {
+        .text {
+            font-size: 6em;
+            font-variant: small-caps;
+            font-weight: 100;
+            @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
         }
     }
 }
@@ -231,39 +197,46 @@ $font_family:
  ****************************************/
 
 .parsnip {
-    background-color: #749C14;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    .container {
-        .parsnip-logo {
-            height: 16.6em;
-            width: 10em;
-        }
-
-        .title {
-            .text {
-                font-family: 'Lato', $font_family;
-                font-size: 7em;
-            }
-        }
+    .parsnip-logo {
+        height: 15.9em;
+        width: 10em;
     }
 
-    .background-copyright {
-        color: #fff;
-        font-size: 12px;
-        text-decoration: none;
-
-        position: absolute;
-        left: 12px;
-        bottom: 12px;
+    .title {
+        .text {
+            font-family: 'Lato', $font_family;
+            font-size: 7em;
+            @include text-shadow(0.03em 0.03em 0 rgba(0, 0, 0, 0.3));
+        }
     }
 }
 
+
+/****************************************
+ * Footer
+ ****************************************/
+
+.footer {
+    text-align: center;
+
+    .email {
+        color: #303030;
+        display: inline-block;
+        font-size: 2.2em;
+        text-decoration: none;
+        vertical-align: baseline;
+
+        .envelope {
+            height: 1em;
+            width: 1.5em;
+        }
+    }
+
+    .website-copyright {
+        font-size: 1.2em;
+        margin-top: 2em;
+    }
+}
 
 /****************************************
  * Global styles
@@ -271,11 +244,11 @@ $font_family:
 
 html,
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: $background_color;
+    color: $normal_text;
 
     font-family: $font_family;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 300;
 
     margin: 0;
@@ -295,18 +268,13 @@ em {
     font-style: italic;
 }
 
-.glyphicon {
-    vertical-align: -0.1em;
-}
-
 a {
     color: $link_text;
     text-decoration: underline;
 }
 
 a:hover {
-    opacity: 0.6;
-    transition: 0.2s;
+    opacity: 0.5;
 }
 
 .nowrap {
@@ -368,7 +336,6 @@ a:hover {
 .bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title.png)}
 .envelope{background-image:url(#{$images_path}envelope.png)}
 .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
-.parsnip{background-image:url(#{$images_path}parsnip-bg.jpg)}
 .parsnip-logo{background-image:url(#{$images_path}parsnip-logo.png)}
 
 @media
@@ -383,7 +350,6 @@ only screen and (min-resolution:2dppx) {
     .bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
     .envelope{background-image:url(#{$images_path}envelope_2x.png)}
     .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
-    .parsnip{background-image:url(#{$images_path}parsnip-bg_2x.jpg)}
     .parsnip-logo{background-image:url(#{$images_path}parsnip-logo_2x.png)}
 }
 
@@ -395,56 +361,49 @@ only screen and (min-resolution:2dppx) {
 
 @media (max-width: 640px) {
 
-    .section {
-        .container {
-            padding-left: 2.6042%;
-            padding-right: 2.6042%;
-        }
+    .container {
+        padding-left: 2.6042%;
+        padding-right: 2.6042%;
     }
 }
 
 @media (max-width: 600px) {
 
     .bracingeffect {
-        .container {
-            .bracingeffect-logo {
-                font-size: 8px;
-            }
+        .bracingeffect-logo {
+            font-size: 8px;
         }
     }
 }
 
 @media (max-width: 500px) {
 
-    .bracingeffect {
-        .container {
-            .bracingeffect-logo {
-                display: none;
+    .chaosclock {
+        .logo {
+            margin: 3em auto 0 auto;
+        }
+
+        .title {
+            .text {
+                font-size: 5.5em;
             }
         }
     }
 
-    .chaosclock {
-        .container {
-            .title {
-                .text {
-                    font-size: 5.5em;
-                }
-            }
+    .parsnip {
+        .logo {
+            margin: 1em auto 0 auto;
         }
     }
 
     .jurbly, .chaosclock, .parsnip {
-        .container {
-            .logo {
-                display: block;
-                margin: 4em auto 0 auto;
-                position: static;
-            }
+        .logo {
+            display: block;
+            position: static;
+        }
 
-            .title, .description {
-                margin-left: 0em;
-            }
+        .title, .description {
+            margin-left: 0em;
         }
     }
 }
@@ -452,31 +411,25 @@ only screen and (min-resolution:2dppx) {
 @media (max-width: 360px) {
 
     .jurbly {
-        .container {
-            .title {
-                .text {
-                    font-size: 9em;
-                }
+        .title {
+            .text {
+                font-size: 9em;
             }
         }
     }
 
     .chaosclock {
-        .container {
-            .title {
-                .text {
-                    font-size: 4.5em;
-                }
+        .title {
+            .text {
+                font-size: 4.5em;
             }
         }
     }
 
     .parsnip {
-        .container {
-            .title {
-                .text {
-                    font-size: 6em;
-                }
+        .title {
+            .text {
+                font-size: 6em;
             }
         }
     }
