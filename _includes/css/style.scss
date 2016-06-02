@@ -59,14 +59,14 @@ $font_family:
         display: inline-block;
     }
 
-    .title {
-        max-width: 100%;
+    a {
+        color: $normal_text;
+        display: block;
+        text-decoration: none;
+        white-space: nowrap;
 
-        a {
-            color: $normal_text;
-            display: block;
-            text-decoration: none;
-            white-space: nowrap;
+        .title {
+            max-width: 100%;
 
             .text {
                 line-height: 60px;
