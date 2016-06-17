@@ -7,4 +7,4 @@ sass:
 
     # style : nested (default), compact, compressed, expanded
     #         :nested, :compact, :compressed, :expanded also works
-    style: :expanded
+    style: :compressed
