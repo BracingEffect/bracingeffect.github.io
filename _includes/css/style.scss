@@ -4,6 +4,15 @@
 $images_path: "images/";
 $fonts_path: "fonts/";
 
+$badge_height: 40;
+$badge_width: 135;
+$badge_margin: 20;
+
+$iphone_height: 754;
+$iphone_width: 368;
+$iphone_bezel_height: 92;
+$iphone_bezel_width: 24;
+
 $bracing_blue: #0080ff; // rgb(0,128,255)
 $dark_bracing_blue: #0066cc; // rgb(0,102,204)
 $jurbly_pink: #FC69B4; // rgb(252,105,180)
@@ -12,7 +21,7 @@ $dark_parsnip_green: #309000; // rgb(48,144,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 
-$background_color: #f0f0f0;
+$background_color: #000;
 $normal_text: #fff;
 
 $font_family:
@@ -38,258 +47,6 @@ $font_family:
   src: local('Luckiest Guy'), local('LuckiestGuy'), url(#{$fonts_path}LuckiestGuy.ttf) format('truetype');
 }
 
-
-/****************************************
- * Defaults
- ****************************************/
-
-.container {
-    margin: 0 auto 0 auto;
-
-    position: relative;
-
-    max-width: 100%;
-    width: 768px;
-
-    .background-image {
-        max-width: 100%;
-    }
-
-    .logo {
-        display: inline-block;
-    }
-
-    a {
-        color: $normal_text;
-        display: block;
-        text-decoration: none;
-        white-space: nowrap;
-
-        .title {
-            max-width: 100%;
-
-            .text {
-                line-height: 60px;
-                float: left;
-            }
-
-            .arrow {
-                line-height: 50px;
-                float: right;
-                font-size: 7em;
-                font-weight: 300;
-                @include text-shadow(0.04em 0.04em 0 rgba(0, 0, 0, 0.3));
-            }
-        }
-    }
-
-    .description {
-        padding-top: 2em;
-
-        .text {
-            font-size: 2.2em;
-            line-height: 1.5em;
-        }
-    }
-}
-
-
-/****************************************
- * Hero
- ****************************************/
-
-.hero {
-    background-color: $bracing_blue;
-    @include gradient-vertical($start-color: $bracing_blue, $end-color: darken(#7ec0ee, 10%));
-
-    .container {
-        padding: 10em 2em 10em 2em;
-
-        .bracingeffect {
-            text-align: center;
-
-            .title {
-                .text {
-                    .bracingeffect-title {
-                        height: 7.6em;
-                        width: 40.3em;
-
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.hero, .apps .section {
-    color: #fff;
-    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
-}
-
-
-/****************************************
- * Apps
- ****************************************/
-
-$app_padding_top: 4em;
-$app_padding_left: 2em;
-
-.apps {
-    background-color: $background_color;
-    position: relative;
-    overflow-x: hidden;
-    @include box-shadow(0 0 3em rgba(0, 0, 0, 0.5));
-
-    .container {
-        padding: 5em 2em 5em 2em;
-    }
-
-    .section {
-        position: relative;
-
-        border-radius: 0.8em;
-        border-width: 1px;
-        border-style: solid;
-        border-top-color: #888;
-        border-left-color: #888;
-        border-right-color: #fff;
-        border-bottom-color: #fff;
-
-        margin-bottom: 5em;
-        padding: $app_padding_top $app_padding_left;
-
-        min-height: 20em;
-
-        overflow: hidden;
-    }
-}
-
-.chaosclock, .parsnip {
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: $app_padding_left;
-    }
-
-    .title, .description {
-        margin-left: 12em;
-    }
-}
-
-.chaosclock {
-    .logo {
-        margin-top: -5em;
-    }
-}
-
-.parsnip {
-    .logo {
-        margin-top: -8.1em;
-    }
-}
-
-
-/****************************************
- * Jurbly
- ****************************************/
-
-.jurbly {
-    background-color: $jurbly_pink;
-    @include gradient-vertical($start-color: $jurbly_pink, $end-color: lighten($jurbly_pink, 10%));
-
-    .title {
-        .text {
-            font-family: 'Luckiest Guy', $font_family;
-            font-size: 9.6em;
-            font-variant: small-caps;
-            @include text-shadow(0.05em 0.05em 0 rgba(0, 0, 0, 0.3));
-        }
-    }
-}
-
-
-/****************************************
- * Chaos Clock
- ****************************************/
-
-.chaosclock {
-    background-color: #000;
-    @include gradient-vertical($start-color: #000, $end-color: #333);
-
-    .chaosclock-logo {
-        height: 10em;
-        width: 10em;
-    }
-
-    .title {
-        .text {
-            font-size: 6em;
-            font-variant: small-caps;
-            font-weight: 100;
-            @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
-        }
-    }
-
-    .description {
-        a {
-            color: #606060;
-        }
-    }
-}
-
-
-/****************************************
- * Parsnip
- ****************************************/
-
-.parsnip {
-    background-color: #749C14;
-    @include gradient-vertical($start-color: $dark_parsnip_green, $end-color: #749C14);
-
-    .parsnip-logo {
-        height: 16.2em;
-        width: 10em;
-    }
-
-    .title {
-        .text {
-            font-family: 'Lato', $font_family;
-            font-size: 7em;
-            @include text-shadow(0.03em 0.03em 0 rgba(0, 0, 0, 0.3));
-        }
-    }
-}
-
-
-/****************************************
- * Footer
- ****************************************/
-
-.footer {
-    text-align: center;
-
-    .email {
-        display: inline-block;
-        font-size: 2.2em;
-        text-decoration: none;
-        vertical-align: baseline;
-
-        .envelope {
-            height: 1em;
-            width: 1.5em;
-        }
-    }
-
-    .website-copyright {
-        font-size: 1.2em;
-        margin-top: 2em;
-    }
-
-    .email, .website-copyright {
-        color: #303030;
-    }
-}
 
 /****************************************
  * Global styles
@@ -322,11 +79,16 @@ em {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-a:hover {
-    opacity: 0.5;
+a:hover, a:focus {
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+h1 {
+    white-space: nowrap;
 }
 
 .accessibility-text {
@@ -347,6 +109,368 @@ a:hover {
 
 
 /****************************************
+ * Defaults
+ ****************************************/
+
+ $content_padding: 4em;
+
+.container {
+    margin: 0 auto;
+
+    position: relative;
+
+    max-width: 100%;
+    width: 768px;
+
+    h1 {
+        max-width: 100%;
+        .background-image {
+            max-width: 96%;
+        }
+    }
+}
+
+.description {
+    font-size: 2.2em;
+    line-height: 1.25em;
+    padding-top: 1em;
+}
+
+.section {
+    position: relative;
+
+    width: 100%;
+
+    @include box-shadow(0 0 3em rgba(0, 0, 0, 0.5));
+
+    h1 {
+        margin-top: #{$iphone_bezel_height}px;
+
+        a, a:hover, a:focus {
+            text-decoration: none;
+        }
+    }
+
+    .badge-container {
+        position: relative;
+
+        height: #{$badge_height}px;
+        width: 50%;
+
+        $badge_offset: $iphone_bezel_height + $badge_height;
+        margin: -#{$badge_offset}px 0 #{$iphone_bezel_height}px 0;
+
+        padding-right: $content_padding;
+
+        .itunes-link, .github-link {
+            display: inline-block;
+            float: right;
+            height: #{$badge_height}px;
+
+            .appstore-badge {
+                width: #{$badge_width}px;
+                height: #{$badge_height}px;
+            }
+        }
+    }
+}
+
+.icon-row {
+    position: relative;
+
+    height: 0;
+    width: 100%;
+}
+
+.content-left {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+.content-right {
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+
+
+/****************************************
+ * iPhone
+ ****************************************/
+
+.iphone {
+    position: relative;
+    display: block;
+    z-index: 100;
+
+    height: #{$iphone_height}px;
+    width: #{$iphone_width}px;
+
+    > .spacer {
+        padding-top: 204.8913%;
+    }
+
+    .iphone-screen {
+        position: absolute;
+        overflow: hidden;
+        z-index: 101;
+
+        width: 320px;
+        height: 568px;
+
+        top: #{$iphone_bezel_height}px;
+        left: #{$iphone_bezel_width}px;
+
+        cursor: pointer;
+
+        .demovideo {
+            width: 320px;
+            height: 568px;
+        }
+    }
+}
+
+
+/****************************************
+ * Hero
+ ****************************************/
+
+.hero {
+    background-color: #2a308d;
+
+    .container {
+        position: relative;
+
+        padding: 200px 0;
+
+        text-align: center;
+
+        h1 {
+            display: inline-block;
+            margin: 0 auto;
+
+            .bracingeffect-title {
+                height: 11.4em;
+                width: 60.0em;
+
+                display: inline-block;
+            }
+        }
+
+        .description {
+            margin: 0 auto;
+            font-size: 3em;
+        }
+    }
+
+    .email {
+        position: absolute;
+
+        top: 1em;
+        right: 1em;
+
+        color: #fff;
+
+        display: inline-block;
+        font-size: 2em;
+        text-decoration: none;
+
+        .envelope {
+            height: 1em;
+            width: 1.5em;
+
+            margin-left: 0.25em;
+
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+.hero, .section {
+    color: #fff;
+    @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+
+/****************************************
+ * Sections
+ ****************************************/
+
+.chaosclock-logo, .parsnip-logo {
+    height: 15em;
+    width: 15em;
+
+    position: absolute;
+    top: -7.5em;
+    left: 50%;
+
+    margin-left: -7.5em;
+
+    z-index: 1000;
+}
+
+
+/****************************************
+ * Jurbly
+ ****************************************/
+
+.jurbly {
+    $jurbly_background_color: #51aae8;
+    $jurbly_background_color_end: #7ec0ee;
+    $jurbly_color: #fff;
+
+    background-color: $jurbly_background_color;
+    @include gradient-vertical($start-color: $jurbly_background_color, $end-color: $jurbly_background_color_end);
+    color: $jurbly_color;
+
+    padding: 100px 0 200px 0;
+
+    .content-left {
+        padding-right: $content_padding;
+    }
+
+    h1 {
+        a {
+            color: $jurbly_color;
+        }
+
+        font-family: 'Luckiest Guy', $font_family;
+        font-size: 14.4em;
+        font-variant: small-caps;
+        @include text-shadow(0.05em 0.05em 0 rgba(0, 0, 0, 0.3));
+    }
+
+    .description {
+        padding-top: 0;
+    }
+
+    .iphone {
+        .iphone-screen {
+            background-color: #FC69B4;
+        }
+    }
+}
+
+
+/****************************************
+ * Chaos Clock
+ ****************************************/
+
+.chaosclock {
+    $chaosclock_background_color: #000;
+    $chaosclock_background_color_end: #333;
+    $chaosclock_color: #fff;
+
+    background-color: $chaosclock_background_color;
+    @include gradient-vertical($start-color: $chaosclock_background_color, $end-color: $chaosclock_background_color_end);
+    color: $chaosclock_color;
+
+    padding: 150px 0 200px 0;
+
+    .content-right {
+        padding-left: $content_padding;
+    }
+
+    h1 {
+        a {
+            color: #fff;
+        }
+
+        font-size: 6.4em;
+        font-variant: small-caps;
+        font-weight: 100;
+        @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
+    }
+
+    .description {
+        a {
+            color: #a0a0a0;
+        }
+    }
+
+    .iphone {
+        float: right;
+    }
+
+    .badge-container {
+        $badge_offset: $iphone_bezel_height + $badge_height;
+        margin: -#{$badge_offset}px 0 #{$iphone_bezel_height}px 50%;
+
+        padding-left: $content_padding;
+        padding-right: 0;
+
+        .itunes-link {
+            float: left;
+        }
+    }
+}
+
+
+/****************************************
+ * Parsnip
+ ****************************************/
+
+.parsnip {
+    $parsnip_background_color: #204000;
+    $parsnip_background_color_end: #a2d100;
+    $parsnip_color: #fff;
+
+    background-color: $parsnip_background_color;
+    @include gradient-vertical($start-color: $parsnip_background_color, $end-color: $parsnip_background_color_end);
+    color: $parsnip_color;
+
+    padding: 150px 0 12px 0;
+
+    .content-left {
+        padding-right: $content_padding;
+    }
+
+    h1 {
+        a {
+            color: $parsnip_color;
+        }
+
+        font-family: 'Lato', $font_family;
+        font-size: 8.75em;
+        @include text-shadow(0.03em 0.03em 0 rgba(0, 0, 0, 0.3));
+    }
+
+    .description {
+        ul {
+            display: inline-block;
+            text-align: left;
+            list-style: disc;
+        }
+    }
+
+    .badge-container {
+        .github-link {
+            margin-left: #{$badge_margin}px;
+        }
+    }
+
+    .footer {
+        padding: 54px 0 26px 0;
+
+        text-align: center;
+
+        .website-copyright {
+            font-size: 1.2em;
+        }
+    }
+
+    .background-copyright {
+        color: $parsnip_color;
+        text-decoration: none;
+        display: block;
+        margin-left: 12px;
+        font-size: 12px
+    }
+}
+
+
+/****************************************
  * Background images
  ****************************************/
 
@@ -362,12 +486,11 @@ a:hover {
 }
 
 .section-image {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 100%;
-    min-width: 100%;
+    background-position: 50% 50%;
+    background-size: 100% auto;
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    vertical-align: middle;
 }
 
 .spacer {
@@ -388,7 +511,16 @@ a:hover {
     }
 }
 
-.bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo.png)}
+.hero{background-image:url(#{$images_path}hero-bg.jpg)}
+.iphone{background-image:url(#{$images_path}iphone.png)}
+.jurbly .itunes-link .appstore-badge{background-image:url(#{$images_path}jurbly-appstore-badge.png)}
+.jurbly .iphone-screen{background-image:url(#{$images_path}jurbly-screenshot01.png)}
+.chaosclock .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
+.chaosclock .iphone-screen{background-image:url(#{$images_path}chaosclock-screenshot01.png)}
+.parsnip{background-image:url(#{$images_path}parsnip-bg.jpg)}
+.parsnip .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
+.parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge.png)}
+.parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01.png)}
 .bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title.png)}
 .envelope{background-image:url(#{$images_path}envelope.png)}
 .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
@@ -402,7 +534,16 @@ only screen and (-o-min-device-pixel-ratio:2/1),
 only screen and (min-device-pixel-ratio:2),
 only screen and (min-resolution:192dpi),
 only screen and (min-resolution:2dppx) {
-    .bracingeffect-logo{background-image:url(#{$images_path}bracingeffect-logo_2x.png)}
+    .hero{background-image:url(#{$images_path}hero-bg.jpg)}
+    .iphone{background-image:url(#{$images_path}iphone_2x.png)}
+    .jurbly .itunes-link .appstore-badge{background-image:url(#{$images_path}jurbly-appstore-badge_2x.png)}
+    .jurbly .iphone-screen{background-image:url(#{$images_path}jurbly-screenshot01_2x.png)}
+    .chaosclock .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
+    .chaosclock .iphone-screen{background-image:url(#{$images_path}chaosclock-screenshot01_2x.png)}
+    .parsnip{background-image:url(#{$images_path}parsnip-bg.jpg)}
+    .parsnip .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
+    .parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge_2x.png)}
+    .parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01_2x.png)}
     .bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
     .envelope{background-image:url(#{$images_path}envelope_2x.png)}
     .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
@@ -415,98 +556,103 @@ only screen and (min-resolution:2dppx) {
  ****************************************/
 
 
-@media (max-width: 768px) {
-
-    .hero, .apps {
-        .container, .section {
-            padding-left: 2.6042%;
-            padding-right: 2.6042%;
-        }
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
 
     .chaosclock {
-        .title {
-            .text {
-                font-size: 5.25em;
-            }
-        }
-    }
-
-    .apps {
-        .container {
-            .description {
-                .text {
-                    font-size: 2em;
-                }
-            }
+        h1 {
+            font-size: 5.2em;
         }
     }
 }
 
-@media (max-width: 540px) {
 
-    .chaosclock {
-        .title {
-            .text {
-                font-size: 4.875em;
-            }
-        }
-    }
-
-    .parsnip {
-        .title {
-            .text {
-                font-size: 6.5em;
-            }
-        }
-    }
-}
-
-@media (max-width: 500px) {
-
-    .chaosclock, .parsnip {
-        .logo {
-            margin: 3em auto 0 auto;
-        }
-    }
-
-    .jurbly, .chaosclock, .parsnip {
-        .logo {
-            display: block;
-            position: static;
-        }
-
-        .title, .description {
-            margin-left: 0em;
-        }
-    }
-}
-
-@media (max-width: 380px) {
+@media (max-width: 880px) {
 
     .jurbly {
-        .title {
-            .text {
-                font-size: 9em;
-            }
+        h1 {
+            font-size: 11em;
         }
     }
 
     .chaosclock {
-        .title {
-            .text {
-                font-size: 4.5em;
-            }
+        h1 {
+            font-size: 4em;
         }
     }
 
     .parsnip {
-        .title {
-            .text {
-                font-size: 6em;
+        h1 {
+            font-size: 7em;
+        }
+    }
+}
+
+
+@media (max-width: #{$iphone_width * 2}px) {
+
+    .section {
+        .content-left, .content-right {
+            float: none;
+            text-align: center;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+            h1 {
+                margin-top: 0;
+            }
+
+            .iphone {
+                float: none;
+            }
+        }
+
+        .badge-container {
+            margin: 54px auto 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+            width: #{$badge_width}px;
+        }
+    }
+
+    .chaosclock {
+        padding: 110px 0 200px 0;
+    }
+
+    .parsnip {
+        padding: 110px 0 12px 0;
+
+        .badge-container {
+            width: #{($badge_width * 2) + $badge_margin}px;
+        }
+    }
+
+    .iphone {
+        margin: 3.2em auto 0 auto;
+    }
+}
+
+
+@media (max-width: #{$iphone_width}px) {
+
+    .iphone {
+        width: 100%;
+        height: auto;
+
+        > .spacer {
+            padding-top: 204.8913%;
+        }
+
+        .iphone-screen {
+            width: (320.0 / $iphone_width) * 100%;
+            height: (568.0 / $iphone_height) * 100%;
+
+            top: ($iphone_bezel_height / $iphone_height) * 100%;
+            left: ($iphone_bezel_width / $iphone_width) * 100%;
+
+            .demovideo {
+                width: 100%;
+                height: 100%;
             }
         }
     }
