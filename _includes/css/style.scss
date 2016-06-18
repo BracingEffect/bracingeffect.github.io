@@ -123,9 +123,10 @@ h1 {
     width: 768px;
 
     h1 {
-        max-width: 100%;
+        max-width: 96%;
+
         .background-image {
-            max-width: 96%;
+            max-width: 100%;
         }
     }
 }
@@ -248,19 +249,22 @@ h1 {
 
         h1 {
             display: inline-block;
-            margin: 0 auto;
+            margin: 0 auto 30px auto;
 
             .bracingeffect-title {
                 height: 11.4em;
                 width: 60.0em;
 
                 display: inline-block;
+
+                background-position: 50% 75%;
             }
         }
 
         .description {
             margin: 0 auto;
             font-size: 3em;
+            padding-top: 0;
         }
     }
 
@@ -583,6 +587,30 @@ only screen and (min-resolution:2dppx) {
     .parsnip {
         h1 {
             font-size: 7em;
+        }
+    }
+}
+
+
+@media (max-width: 625px) {
+    .hero {
+        .container {
+            padding: 32% 0;
+
+            h1 {
+                margin: 0 auto 4.8% auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 360px) {
+    .hero {
+        .container {
+            .description {
+                font-size: 2.5em;
+            }
         }
     }
 }
