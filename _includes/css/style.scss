@@ -266,7 +266,7 @@ h1 {
         }
 
         .description {
-            @include animation(0.75s ease-out 0.5s hero-fade-in both);
+            @include animation(0.5s ease-out 0.5s hero-fade-in both);
 
             font-size: 3em;
 
