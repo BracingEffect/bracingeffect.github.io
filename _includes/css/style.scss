@@ -241,6 +241,8 @@ h1 {
  ****************************************/
 
 .hero-image {
+    @include animation(0.75s ease-out 0.125s hero-fade-in both);
+
     position: fixed;
     top: 0;
     left: 0;
@@ -266,7 +268,7 @@ h1 {
         text-align: center;
 
         h1 {
-            @include animation(0.625s ease-out 0.25s hero-fade-in both);
+            @include animation(0.625s ease-out 0.25s hero-slide-in both);
 
             font-size: 3em;
 
@@ -284,7 +286,7 @@ h1 {
         }
 
         .description {
-            @include animation(0.625s ease-out 0.5s hero-fade-in both);
+            @include animation(0.625s ease-out 0.5s hero-slide-in both);
 
             font-size: 3em;
 
@@ -321,17 +323,30 @@ h1 {
     @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
-@-webkit-keyframes hero-fade-in {
+@-webkit-keyframes hero-slide-in {
     from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@-moz-keyframes hero-slide-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@-o-keyframes hero-slide-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@keyframes hero-slide-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+
+@-webkit-keyframes hero-fade-in {
+    from { opacity: 0; }
 }
 @-moz-keyframes hero-fade-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
+    from { opacity: 0; }
 }
 @-o-keyframes hero-fade-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
+    from { opacity: 0; }
 }
 @keyframes hero-fade-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
+    from { opacity: 0; }
 }
 
 
