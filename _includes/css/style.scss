@@ -241,19 +241,23 @@ h1 {
     background-color: #2a308d;
 
     .container {
-        position: relative;
-
         padding: 200px 0;
+
+        position: relative;
 
         text-align: center;
 
         h1 {
+            @include animation(0.75s ease-out 0.25s hero-fade-in both);
+
+            font-size: 3em;
+
             display: inline-block;
             margin: 0 auto 30px auto;
 
             .bracingeffect-title {
-                height: 11.4em;
-                width: 60.0em;
+                height: 114px;
+                width: 600px;
 
                 display: inline-block;
 
@@ -262,8 +266,11 @@ h1 {
         }
 
         .description {
-            margin: 0 auto;
+            @include animation(0.75s ease-out 0.5s hero-fade-in both);
+
             font-size: 3em;
+
+            margin: 0 auto;
             padding-top: 0;
         }
     }
@@ -294,6 +301,19 @@ h1 {
 .hero, .section {
     color: #fff;
     @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+@-webkit-keyframes hero-fade-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@-moz-keyframes hero-fade-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@-o-keyframes hero-fade-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+@keyframes hero-fade-in {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
 }
 
 
