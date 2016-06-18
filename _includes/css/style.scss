@@ -240,8 +240,23 @@ h1 {
  * Hero
  ****************************************/
 
-.hero {
+.hero-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
     background-color: #2a308d;
+
+    will-change: transform;
+
+    z-index: -1;
+}
+
+.hero {
+    position: relative;
 
     .container {
         padding: 200px 0;
@@ -348,6 +363,11 @@ h1 {
 
     padding: 100px 0 200px 0;
 
+    .content-left, .content-right {
+        position: relative;
+        z-index: 1;
+    }
+
     .content-left {
         padding-right: $content_padding;
     }
@@ -393,7 +413,7 @@ h1 {
 
     overflow: hidden;
 
-    z-index: -1;
+    z-index: 0;
 }
 
 .cloud {
@@ -646,7 +666,7 @@ $cloud_count: 10;
     }
 }
 
-.hero{background-image:url(#{$images_path}hero-bg.jpg)}
+.hero-image{background-image:url(#{$images_path}hero-bg.jpg)}
 .iphone{background-image:url(#{$images_path}iphone.png)}
 .jurbly .itunes-link .appstore-badge{background-image:url(#{$images_path}jurbly-appstore-badge.png)}
 .jurbly .iphone-screen{background-image:url(#{$images_path}jurbly-screenshot01.png)}
@@ -669,7 +689,7 @@ only screen and (-o-min-device-pixel-ratio:2/1),
 only screen and (min-device-pixel-ratio:2),
 only screen and (min-resolution:192dpi),
 only screen and (min-resolution:2dppx) {
-    .hero{background-image:url(#{$images_path}hero-bg.jpg)}
+    .hero-image{background-image:url(#{$images_path}hero-bg.jpg)}
     .iphone{background-image:url(#{$images_path}iphone_2x.png)}
     .jurbly .itunes-link .appstore-badge{background-image:url(#{$images_path}jurbly-appstore-badge_2x.png)}
     .jurbly .iphone-screen{background-image:url(#{$images_path}jurbly-screenshot01_2x.png)}
