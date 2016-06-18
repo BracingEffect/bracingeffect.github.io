@@ -343,12 +343,7 @@ h1 {
  ****************************************/
 
 .jurbly {
-    $jurbly_background_color: #51aae8;
-    $jurbly_background_color_end: #7ec0ee;
     $jurbly_color: #fff;
-
-    background-color: $jurbly_background_color;
-    @include gradient-vertical($start-color: $jurbly_background_color, $end-color: $jurbly_background_color_end);
     color: $jurbly_color;
 
     padding: 100px 0 200px 0;
@@ -377,6 +372,119 @@ h1 {
             background-color: #FC69B4;
         }
     }
+}
+
+
+/****************************************
+ * Clouds
+ ****************************************/
+
+.clouds {
+    $jurbly_background_color: #51aae8;
+    $jurbly_background_color_end: #7ec0ee;
+    background-color: $jurbly_background_color;
+    @include gradient-vertical($start-color: $jurbly_background_color, $end-color: $jurbly_background_color_end);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.cloud {
+    background: #fff;
+
+    width: 25%;
+
+    max-width: 400px;
+    max-height: 120px;
+
+    position: absolute;
+
+    @include border-radius(400px);
+
+    .spacer {
+        padding-top: 30%;
+    }
+}
+
+.cloud:before, .cloud:after {
+    background: #fff;
+    content: '';
+    position: absolute;
+
+    @include border-radius(200px);
+}
+
+.cloud:before {
+    width: 50%;
+    padding-top: 40%;
+
+    max-width: 200px;
+    max-height: 160px;
+
+    top: -25%;
+    left: 5%;
+
+    @include transform(rotate(30deg));
+}
+
+.cloud:after {
+    width: 60%;
+    padding-top: 60%;
+
+    max-width: 240px;
+    max-height: 240px;
+
+    top: -92%;
+    left: auto;
+    right: 7.5%;
+}
+
+
+$cloud_count: 10;
+@for $i from 1 through $cloud_count {
+    $variance: random(70);
+    $left: random(45);
+    @if $i % 2 == 0 {
+        $left: $left + 45;
+        $variance: $variance + 30;
+    }
+    $top: (80.0 / $cloud_count) * $i;
+    $percent: ($left * 0.8) + 20.0;
+    $time: 30 - ($variance / 6.667);
+    $delay: (1.0 - ($percent / 100.0)) * $time;
+
+    .cloud-#{$i} {
+        top: $top * 1%;
+        left: $left * 1%;
+        opacity: 0.3 + ($variance / 250.0);
+        @include transform(scale(0.3 + ($variance / 160.0)));
+        @include animation(moveclouds #{$time}s linear -#{$delay}s infinite);
+    }
+}
+
+
+@-webkit-keyframes moveclouds {
+    0% { left: 100% }
+    100% { left: -25%; }
+}
+@-moz-keyframes moveclouds {
+    0% { left: 100% }
+    100% { left: -25%; }
+}
+@-o-keyframes moveclouds {
+    0% { left: 100% }
+    100% { left: -25%; }
+}
+@keyframes moveclouds {
+    0% { left: 100% }
+    100% { left: -25%; }
 }
 
 
