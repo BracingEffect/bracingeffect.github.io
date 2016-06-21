@@ -400,6 +400,19 @@ h1 {
 
     .description {
         padding-top: 0;
+
+        .list-container {
+            ul {
+                display: inline-block;
+                text-align: left;
+                margin: 0.5em 0 1.5em 0;
+
+                li:before {
+                    content: '\2605';
+                    margin-right: 0.375em;
+                }
+            }
+        }
     }
 
     .iphone {
@@ -610,7 +623,12 @@ $cloud_count: 10;
         ul {
             display: inline-block;
             text-align: left;
-            list-style: disc;
+            margin-top: 0.5em;
+
+            li:before {
+                content: '\25CF';
+                margin-right: 0.5em;
+            }
         }
     }
 
