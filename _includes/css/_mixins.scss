@@ -8,6 +8,21 @@
     animation: $animation;
 }
 
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
 @mixin transition($transition...) {
     -webkit-transition: $transition;
     -moz-transition: $transition;

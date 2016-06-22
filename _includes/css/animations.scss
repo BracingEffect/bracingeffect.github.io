@@ -1,0 +1,34 @@
+
+@import "mixins";
+
+
+#hero-image.initial,
+#email.initial,
+#be-title.initial,
+#be-description.initial {
+    visibility: hidden;
+}
+
+#hero-image:not(.initial),
+#email:not(.initial) {
+    visibility: visible;
+    @include animation(0.75s ease-out 0s hero-fade-in both);
+}
+
+#be-title:not(.initial) {
+    visibility: visible;
+    @include animation(0.625s ease-out 0.25s hero-slide-in both);
+}
+
+#be-description:not(.initial) {
+    visibility: visible;
+    @include animation(0.625s ease-out 0.5625s hero-slide-in both);
+}
+
+@include keyframes(hero-slide-in) {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+
+@include keyframes(hero-fade-in) {
+    from { opacity: 0; }
+}

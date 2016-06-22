@@ -43,23 +43,35 @@
 {{ style_css | scssify }}
     </style>
 
+    <style>
+{% capture style_css %}{% include css/animations.scss %}{% endcapture %}
+{{ style_css | scssify }}
+    </style>
+
+<noscript>
+    <style>
+{% capture style_css %}{% include css/noscript-animations.scss %}{% endcapture %}
+{{ style_css | scssify }}
+    </style>
+</noscript>
+
 </head>
 <body>
 
-<div class="hero-image section-image"></div>
+<div id="hero-image" class="hero-image section-image initial"></div>
 
 <div class="hero">
-    <a href="mailto:support@bracingeffect.com" class="email">
+    <a id="email" href="mailto:support@bracingeffect.com" class="email initial">
         Contact <div class="envelope background-image"></div>
     </a>
     <div class="container">
         <a href="http://bracingeffect.com">
             <h1>
                 <span class="accessibility-text">Bracing Effect</span>
-                <div class="bracingeffect-title background-image"></div>
+                <div id="be-title" class="be-title background-image initial"></div>
             </h1>
         </a>
-        <div class="description">Apps & games for iOS</div>
+        <div id="be-description" class="description initial">Apps & games for iOS</div>
     </div>
 </div>
 
@@ -208,6 +220,27 @@
     <a class="background-copyright" href="http://www.flickr.com/photos/wwarby/">Photo © 2014 William Warby</a>
 </div>
 
+<script type="text/javascript">
+{% include js/imagesloaded.pkgd.min.js %}
+</script>
+<script type="text/javascript">
+
+imagesLoaded('#hero-image, #be-title', { background: true }, function(instance) {
+    var len = instance.elements.length;
+    for(var i = 0; i < len; i++) {
+        var el = instance.elements[i];
+        el.className = el.className.replace('initial', '');
+        if(el.id == 'hero-image') {
+            el = document.getElementById('email');
+            el.className = el.className.replace('initial', '');
+        } else if(el.id == 'be-title') {
+            el = document.getElementById('be-description');
+            el.className = el.className.replace('initial', '');
+        }
+    }
+});
+
+</script>
 
 {% include google_analytics.html %}
 

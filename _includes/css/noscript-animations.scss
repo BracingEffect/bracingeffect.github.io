@@ -1,0 +1,27 @@
+
+@import "mixins";
+
+
+body #hero-image.initial,
+body #email.initial {
+    visibility: visible !important;
+    @include animation(0.75s ease-out 0.125s hero-fade-in both);
+}
+
+body #be-title.initial {
+    visibility: visible !important;
+    @include animation(0.625s ease-out 0.25s hero-slide-in both);
+}
+
+body #be-description.initial {
+    visibility: visible !important;
+    @include animation(0.625s ease-out 0.5625s hero-slide-in both);
+}
+
+@include keyframes(hero-slide-in) {
+    from { opacity: 0; @include transform(translateY(0.667em)); }
+}
+
+@include keyframes(hero-fade-in) {
+    from { opacity: 0; }
+}

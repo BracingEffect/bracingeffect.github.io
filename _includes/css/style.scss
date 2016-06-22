@@ -1,6 +1,7 @@
 
 @import "mixins";
 
+
 $images_path: "images/";
 $fonts_path: "fonts/";
 
@@ -246,8 +247,6 @@ h1 {
  ****************************************/
 
 .hero-image {
-    @include animation(0.75s ease-out 0.125s hero-fade-in both);
-
     position: fixed;
     top: 0;
     left: 0;
@@ -273,14 +272,13 @@ h1 {
         text-align: center;
 
         h1 {
-            @include animation(0.625s ease-out 0.25s hero-slide-in both);
 
             font-size: 3em;
 
             display: inline-block;
             margin: 0 auto 30px auto;
 
-            .bracingeffect-title {
+            .be-title {
                 height: 114px;
                 width: 600px;
 
@@ -291,8 +289,6 @@ h1 {
         }
 
         .description {
-            @include animation(0.625s ease-out 0.5s hero-slide-in both);
-
             font-size: 3em;
 
             margin: 0 auto;
@@ -326,32 +322,6 @@ h1 {
 .hero, .section {
     color: #fff;
     @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
-}
-
-@-webkit-keyframes hero-slide-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
-}
-@-moz-keyframes hero-slide-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
-}
-@-o-keyframes hero-slide-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
-}
-@keyframes hero-slide-in {
-    from { opacity: 0; @include transform(translateY(0.667em)); }
-}
-
-@-webkit-keyframes hero-fade-in {
-    from { opacity: 0; }
-}
-@-moz-keyframes hero-fade-in {
-    from { opacity: 0; }
-}
-@-o-keyframes hero-fade-in {
-    from { opacity: 0; }
-}
-@keyframes hero-fade-in {
-    from { opacity: 0; }
 }
 
 
@@ -714,7 +684,7 @@ $cloud_count: 10;
 .parsnip .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge.png)}
 .parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge.png)}
 .parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01.png)}
-.bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title.png)}
+.be-title{background-image:url(#{$images_path}bracingeffect-title.png)}
 .envelope{background-image:url(#{$images_path}envelope.png)}
 .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
 .parsnip-logo{background-image:url(#{$images_path}parsnip-logo.png)}
@@ -737,7 +707,7 @@ only screen and (min-resolution:2dppx) {
     .parsnip .itunes-link .appstore-badge{background-image:url(#{$images_path}appstore-badge_2x.png)}
     .parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge_2x.png)}
     .parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01_2x.png)}
-    .bracingeffect-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
+    .be-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
     .envelope{background-image:url(#{$images_path}envelope_2x.png)}
     .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
     .parsnip-logo{background-image:url(#{$images_path}parsnip-logo_2x.png)}
