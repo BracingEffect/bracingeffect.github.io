@@ -302,19 +302,20 @@ h1 {
         top: 1em;
         right: 1em;
 
-        color: #fff;
-
-        display: inline-block;
         font-size: 2em;
-        text-decoration: none;
 
-        .envelope {
-            height: 1em;
-            width: 1.5em;
+        a {
+            color: #fff;
+            text-decoration: none;
 
-            margin-left: 0.25em;
+            .envelope {
+                height: 1em;
+                width: 1.5em;
 
-            vertical-align: text-bottom;
+                margin-left: 0.25em;
+
+                vertical-align: text-bottom;
+            }
         }
     }
 }
