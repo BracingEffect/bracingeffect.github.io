@@ -22,7 +22,7 @@ $dark_parsnip_green: #309000; // rgb(48,144,0)
 $chaos_violet: #a00aa0; // rgb(160,10,160)
 $github_purple: #400440; // rgb(64,4,64)
 
-$background_color: #000;
+$background_color: #2a308d; // #000;
 $normal_text: #fff;
 
 $font_family:
@@ -254,7 +254,7 @@ h1 {
     height: 100%;
     width: 100%;
 
-    background-color: #000; // #2a308d;
+    background-color: $background_color;
 
     will-change: transform;
 
@@ -308,13 +308,11 @@ h1 {
             color: #fff;
             text-decoration: none;
 
+            display: inline-block;
+
             .envelope {
-                height: 1em;
-                width: 1.5em;
-
-                margin-left: 0.25em;
-
-                vertical-align: text-bottom;
+                height: 2em;
+                width: 2em;
             }
         }
     }

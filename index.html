@@ -62,8 +62,8 @@
 
 <div class="hero">
     <div id="email" class="email initial">
-        <a href="mailto:contact@bracingeffect.com">
-            Contact <div id="envelope" class="envelope background-image"></div>
+        <a href="mailto:contact@bracingeffect.com" aria-label="Email us">
+            <div id="envelope" class="envelope background-image"></div>
         </a>
     </div>
     <div class="container">
@@ -227,10 +227,13 @@
 </script>
 <script type="text/javascript">
 
-imagesLoaded('#hero-image, #envelope', { background: true }, function(instance) {
+imagesLoaded('#hero-image', { background: true }, function(instance) {
     var el = document.getElementById('hero-image');
     el.className = el.className.replace('initial', '');
-    el = document.getElementById('email');
+});
+
+imagesLoaded('#envelope', { background: true }, function(instance) {
+    var el = document.getElementById('email');
     el.className = el.className.replace('initial', '');
 });
 

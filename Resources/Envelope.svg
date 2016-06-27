@@ -28,11 +28,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="110.38148"
-     inkscape:cy="-61.752993"
+     inkscape:zoom="1"
+     inkscape:cx="163.16727"
+     inkscape:cy="93.951733"
      inkscape:document-units="px"
-     inkscape:current-layer="g4136"
+     inkscape:current-layer="g4139"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -97,7 +97,7 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-952.36221)"
      id="g4136"
      inkscape:groupmode="layer"
@@ -121,5 +121,20 @@
        inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
        inkscape:export-xdpi="39.600002"
        inkscape:export-ydpi="39.600002" />
+  </g>
+  <g
+     inkscape:label="Encircled"
+     inkscape:groupmode="layer"
+     id="g4139"
+     transform="translate(0,-952.36221)"
+     style="display:inline">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.34300041;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 200 -300 A 200 200 0 0 0 0 -100 A 200 200 0 0 0 200 100 A 200 200 0 0 0 400 -100 A 200 200 0 0 0 200 -300 z M 80 -180 L 320 -180 L 200 -60 L 80 -180 z M 80 -160.80078 L 140.80078 -100 L 80 -39.199219 L 80 -160.80078 z M 320 -160.80078 L 320 -39.199219 L 259.19922 -100 L 320 -160.80078 z M 150.40039 -90.400391 L 200 -40.800781 L 249.59961 -90.400391 L 320 -20 L 80 -20 L 150.40039 -90.400391 z "
+       transform="translate(0,952.36221)"
+       id="path4145"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope.png"
+       inkscape:export-xdpi="9"
+       inkscape:export-ydpi="9" />
   </g>
 </svg>
