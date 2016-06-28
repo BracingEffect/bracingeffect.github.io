@@ -265,7 +265,7 @@ h1 {
     position: relative;
 
     .container {
-        padding: 200px 0;
+        padding: 160px 0 200px 0;
 
         position: relative;
 
@@ -296,10 +296,10 @@ h1 {
         }
     }
 
-    .email {
+    .contact {
         position: absolute;
 
-        top: 1em;
+        bottom: 1em;
         right: 1em;
 
         font-size: 2em;
@@ -310,7 +310,9 @@ h1 {
 
             display: inline-block;
 
-            .envelope {
+            margin-left: 0.5em;
+
+            .email, .twitter {
                 height: 2em;
                 width: 2em;
             }
@@ -684,7 +686,8 @@ $cloud_count: 10;
 .parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge.png)}
 .parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01.png)}
 .be-title{background-image:url(#{$images_path}bracingeffect-title.png)}
-.envelope{background-image:url(#{$images_path}envelope.png)}
+.email{background-image:url(#{$images_path}email.png)}
+.twitter{background-image:url(#{$images_path}twitter.png)}
 .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
 .parsnip-logo{background-image:url(#{$images_path}parsnip-logo.png)}
 
@@ -707,7 +710,8 @@ only screen and (min-resolution:2dppx) {
     .parsnip .github-link .appstore-badge{background-image:url(#{$images_path}github-badge_2x.png)}
     .parsnip .iphone-screen{background-image:url(#{$images_path}parsnip-screenshot01_2x.png)}
     .be-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
-    .envelope{background-image:url(#{$images_path}envelope_2x.png)}
+    .email{background-image:url(#{$images_path}email_2x.png)}
+    .twitter{background-image:url(#{$images_path}twitter_2x.png)}
     .chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
     .parsnip-logo{background-image:url(#{$images_path}parsnip-logo_2x.png)}
 }
@@ -753,11 +757,15 @@ only screen and (min-resolution:2dppx) {
 @media (max-width: 625px) {
     .hero {
         .container {
-            padding: 32% 0;
+            padding: (160 / 625) * 100% 0 (200 / 625) *100% 0;
 
             h1 {
                 margin: 0 auto 4.8% auto;
             }
+        }
+
+        .contact {
+            right: (20 / 625) * 100%;
         }
     }
 }

@@ -3,14 +3,14 @@
 
 
 #hero-image.initial,
-#email.initial,
+#contact.initial,
 #be-title.initial,
 #be-description.initial {
     visibility: hidden;
 }
 
 #hero-image:not(.initial),
-#email:not(.initial) {
+#contact:not(.initial) {
     visibility: visible;
     @include animation(0.75s ease-out 0s hero-fade-in both);
 }

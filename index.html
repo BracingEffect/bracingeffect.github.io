@@ -61,9 +61,12 @@
 <div id="hero-image" class="hero-image section-image initial"></div>
 
 <div class="hero">
-    <div id="email" class="email initial">
-        <a href="mailto:contact@bracingeffect.com" aria-label="Email us">
-            <div id="envelope" class="envelope background-image"></div>
+    <div id="contact" class="contact initial">
+        <a href="https://twitter.com/bracingeffect" aria-label="Twitter">
+            <div id="twitter" class="twitter background-image"></div>
+        </a>
+        <a href="mailto:contact@bracingeffect.com" aria-label="Email">
+            <div id="email" class="email background-image"></div>
         </a>
     </div>
     <div class="container">
@@ -232,8 +235,8 @@ imagesLoaded('#hero-image', { background: true }, function(instance) {
     el.className = el.className.replace('initial', '');
 });
 
-imagesLoaded('#envelope', { background: true }, function(instance) {
-    var el = document.getElementById('email');
+imagesLoaded('#email, #twitter', { background: true }, function(instance) {
+    var el = document.getElementById('contact');
     el.className = el.className.replace('initial', '');
 });
 

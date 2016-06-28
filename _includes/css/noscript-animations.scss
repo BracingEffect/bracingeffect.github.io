@@ -3,7 +3,7 @@
 
 
 body #hero-image.initial,
-body #email.initial {
+body #contact.initial {
     visibility: visible !important;
     @include animation(0.75s ease-out 0.125s hero-fade-in both);
 }

@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Envelope.svg"
-   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+   sodipodi:docname="Email.svg"
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email_2x.png"
    inkscape:export-xdpi="36"
    inkscape:export-ydpi="36">
   <defs
@@ -75,7 +75,7 @@
        d="M 0,0 L 75,75 L 150,0 L 0,0 Z M 0,12 L 0,88 L 38,50 L 0,12 Z m 150,0 l -38,38 l 38,38 l 0,-76 z M 44,56 L 0,100 l 150,0 L 106,56 L 75,87 L 44,56 Z"
        transform="translate(0,952.36221)"
        id="path4323"
-       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/envelope.png"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/email.png"
        inkscape:export-xdpi="19.799999"
        inkscape:export-ydpi="19.799999"
        inkscape:connector-curvature="0" />
@@ -89,7 +89,7 @@
     <path
        inkscape:export-ydpi="19.799999"
        inkscape:export-xdpi="19.799999"
-       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/envelope-dark.png"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/Images/email-dark.png"
        id="path4136"
        transform="translate(0,952.36221)"
        d="M 0,0 L 75,75 L 150,0 L 0,0 Z M 0,12 L 0,88 L 38,50 L 0,12 Z m 150,0 l -38,38 l 38,38 l 0,-76 z M 44,56 L 0,100 l 150,0 L 106,56 L 75,87 L 44,56 Z"
@@ -108,7 +108,7 @@
        id="path4157"
        d="M 10.000011,962.36222 L 10,1052.3622 l 140,0 l 0,-89.99998 z"
        style="opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email_2x.png"
        inkscape:export-xdpi="39.600002"
        inkscape:export-ydpi="39.600002" />
     <path
@@ -118,7 +118,7 @@
        id="path4138"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccccccccc"
-       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope_2x.png"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email_2x.png"
        inkscape:export-xdpi="39.600002"
        inkscape:export-ydpi="39.600002" />
   </g>
@@ -133,7 +133,7 @@
        d="M 200 -300 A 200 200 0 0 0 0 -100 A 200 200 0 0 0 200 100 A 200 200 0 0 0 400 -100 A 200 200 0 0 0 200 -300 z M 80 -180 L 320 -180 L 200 -60 L 80 -180 z M 80 -160.80078 L 140.80078 -100 L 80 -39.199219 L 80 -160.80078 z M 320 -160.80078 L 320 -39.199219 L 259.19922 -100 L 320 -160.80078 z M 150.40039 -90.400391 L 200 -40.800781 L 249.59961 -90.400391 L 320 -20 L 80 -20 L 150.40039 -90.400391 z "
        transform="translate(0,952.36221)"
        id="path4145"
-       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/envelope.png"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email.png"
        inkscape:export-xdpi="9"
        inkscape:export-ydpi="9" />
   </g>
