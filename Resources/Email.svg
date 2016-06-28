@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Email.svg"
-   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email_2x.png"
-   inkscape:export-xdpi="36"
-   inkscape:export-ydpi="36">
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email.png"
+   inkscape:export-xdpi="9"
+   inkscape:export-ydpi="9">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="163.16727"
-     inkscape:cy="93.951733"
+     inkscape:cx="105.47548"
+     inkscape:cy="40.574057"
      inkscape:document-units="px"
      inkscape:current-layer="g4139"
      showgrid="false"
@@ -128,6 +128,14 @@
      id="g4139"
      transform="translate(0,-952.36221)"
      style="display:inline">
+    <path
+       inkscape:export-ydpi="9"
+       inkscape:export-xdpi="9"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/email.png"
+       id="path4141"
+       d="m 220,672.36222 a 200,200 0 0 0 -200,200 A 200,200 0 0 0 220,1072.3622 A 200,200 0 0 0 420,872.36222 a 200,200 0 0 0 -200,-200 z m -120,120 l 240,0 l -120,120 l -120,-120 z m 0,19.19922 l 60.80078,60.80078 L 100,933.163 l 0,-121.60156 z m 240,0 L 340,933.163 L 279.19922,872.36222 L 340,811.56144 Z M 170.40039,881.96183 L 220,931.56144 l 49.59961,-49.59961 L 340,952.36222 l -240,0 l 70.40039,-70.40039 z"
+       style="opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.34300041;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.34300041;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 200 -300 A 200 200 0 0 0 0 -100 A 200 200 0 0 0 200 100 A 200 200 0 0 0 400 -100 A 200 200 0 0 0 200 -300 z M 80 -180 L 320 -180 L 200 -60 L 80 -180 z M 80 -160.80078 L 140.80078 -100 L 80 -39.199219 L 80 -160.80078 z M 320 -160.80078 L 320 -39.199219 L 259.19922 -100 L 320 -160.80078 z M 150.40039 -90.400391 L 200 -40.800781 L 249.59961 -90.400391 L 320 -20 L 80 -20 L 150.40039 -90.400391 z "

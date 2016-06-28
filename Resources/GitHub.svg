@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="420"
+   height="420"
+   viewBox="0 0 420 420"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="GitHub.svg"
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/github_2x.png"
+   inkscape:export-xdpi="18"
+   inkscape:export-ydpi="18">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#808080"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="15.367239"
+     inkscape:cy="46.465252"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4139"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Encircled"
+     inkscape:groupmode="layer"
+     id="g4139"
+     transform="translate(0,-632.36221)"
+     style="display:inline">
+    <g
+       id="g4147"
+       transform="translate(0,-20)">
+      <path
+         d="m 220,672.36222 c -110.5,0 -200,89.5 -200,200 c 0,88.5 57.25,163.24998 136.75,189.74998 c 10,1.75 13.75,-4.25 13.75,-9.5 c 0,-4.75 -0.25,-20.5 -0.25,-37.25 C 120,1024.6122 107,1003.1122 103,991.86222 c -2.25,-5.75 -12,-23.5 -20.5,-28.25 c -7,-3.75 -17,-13 -0.25,-13.25 c 15.75,-0.25 27,14.5 30.75,20.5 c 18,30.24998 46.75,21.75 58.25,16.5 c 1.75,-13 7,-21.75 12.75,-26.75 c -44.5,-5 -91,-22.25 -91,-98.75 c 0,-21.75 7.75,-39.75 20.5,-53.75 c -2,-5 -9,-25.5 2,-53 c 0,0 16.75,-5.25 55,20.5 c 16,-4.5 33,-6.75 50,-6.75 c 17,0 34,2.25 50,6.75 c 38.25,-26 55,-20.5 55,-20.5 c 11,27.5 4,48 2,53 c 12.75,14 20.5,31.75 20.5,53.75 c 0,76.75 -46.75,93.75 -91.25,98.75 c 7.25,6.25 13.5,18.25 13.5,37 c 0,26.74998 -0.25,48.24998 -0.25,54.99998 c 0,5.25 3.75,11.5 13.75,9.5 A 200.325,200.325 0 0 0 420,872.36222 c 0,-110.5 -89.5,-200 -200,-200 z"
+         id="path4145"
+         inkscape:connector-curvature="0"
+         style="opacity:0.3;fill:#000000" />
+      <path
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0"
+         id="path16"
+         d="m 200,652.36221 c -110.5,0 -200,89.5 -200,200 c 0,88.5 57.25,163.24999 136.75,189.74999 c 10,1.75 13.75,-4.25 13.75,-9.5 c 0,-4.75 -0.25,-20.5 -0.25,-37.24999 C 100,1004.6122 87,983.11221 83,971.86221 c -2.25,-5.75 -12,-23.5 -20.5,-28.25 c -7,-3.75 -17,-13 -0.25,-13.25 c 15.75,-0.25 27,14.5 30.75,20.5 c 18,30.25 46.75,21.75 58.25,16.5 c 1.75,-13 7,-21.75 12.75,-26.75 c -44.5,-5 -91,-22.25 -91,-98.75 c 0,-21.75 7.75,-39.75 20.5,-53.75 c -2,-5 -9,-25.5 2,-53 c 0,0 16.75,-5.25 55,20.5 c 16,-4.5 33,-6.75 50,-6.75 c 17,0 34,2.25 50,6.75 c 38.25,-26 55,-20.5 55,-20.5 c 11,27.5 4,48 2,53 c 12.75,14 20.5,31.75 20.5,53.75 c 0,76.75 -46.75,93.75 -91.25,98.75 c 7.25,6.25 13.5,18.25 13.5,37 c 0,26.74999 -0.25,48.24999 -0.25,54.99999 c 0,5.25 3.75,11.5 13.75,9.5 A 200.325,200.325 0 0 0 400,852.36221 c 0,-110.5 -89.5,-200 -200,-200 z" />
+    </g>
+  </g>
+</svg>

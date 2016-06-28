@@ -5,7 +5,7 @@
 body #hero-image.initial,
 body #contact.initial {
     visibility: visible !important;
-    @include animation(0.75s ease-out 0.125s hero-fade-in both);
+    @include animation(1s ease-out 0.125s hero-fade-in both);
 }
 
 body #be-title.initial {

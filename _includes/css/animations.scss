@@ -12,7 +12,7 @@
 #hero-image:not(.initial),
 #contact:not(.initial) {
     visibility: visible;
-    @include animation(0.75s ease-out 0s hero-fade-in both);
+    @include animation(1s ease-out 0s hero-fade-in both);
 }
 
 #be-title:not(.initial) {
