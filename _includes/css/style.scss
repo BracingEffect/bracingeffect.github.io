@@ -169,7 +169,7 @@ h1 {
     width: 768px;
 
     h1 {
-        max-width: 96%;
+        max-width: 100%;
 
         .background-image {
             max-width: 100%;
@@ -317,17 +317,23 @@ $hero_padding_bottom: 100;
 
         text-align: center;
 
-        h1 {
+        a {
             display: inline-block;
-            margin: 0 auto 20px auto;
+            margin-bottom: 20px;
 
-            .be-title {
-                height: 114px;
-                width: 600px;
+            max-width: 96%;
 
-                display: inline-block;
+            h1 {
+                margin: 0 auto 0 auto;
 
-                background-position: 50% 75%;
+                .be-title {
+                    height: 114px;
+                    width: 600px;
+
+                    display: inline-block;
+
+                    background-position: 50% 75%;
+                }
             }
         }
 
