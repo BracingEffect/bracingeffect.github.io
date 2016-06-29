@@ -88,7 +88,7 @@ a {
 
 a:hover, a:focus {
     text-decoration: underline;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 h1 {
@@ -288,6 +288,9 @@ h1 {
  * Hero
  ****************************************/
 
+$hero_padding_top: 120;
+$hero_padding_bottom: 100;
+
 .hero-image {
     position: fixed;
     top: 0;
@@ -308,7 +311,7 @@ h1 {
     position: relative;
 
     .container {
-        padding: 160px 0 200px 0;
+        padding: #{$hero_padding_top}px 0 #{$hero_padding_bottom}px 0;
 
         position: relative;
 
@@ -337,14 +340,11 @@ h1 {
     }
 
     .contact {
-        position: absolute;
-
-        bottom: 1em;
-        right: 1em;
+        float: right;
+        padding-bottom: 1em;
+        padding-right: 1em;
 
         font-size: 2em;
-
-        z-index: 10000;
 
         a {
             color: #fff;
@@ -759,7 +759,7 @@ only screen and (min-resolution:2dppx) {
 @media (max-width: 625px) {
     .hero {
         .container {
-            padding: (160 / 625) * 100% 0 (200 / 625) *100% 0;
+            padding: ($hero_padding_top / 625) * 100% 0 ($hero_padding_bottom / 625) *100% 0;
 
             h1 {
                 margin: 0 auto 4.8% auto;
