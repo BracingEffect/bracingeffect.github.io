@@ -24,6 +24,7 @@ $github_purple: #400440; // rgb(64,4,64)
 
 $background_color: #85a0f4; // #fff; // #2a308d; // #000;
 $normal_text: #fff;
+$subtle_text: #a0a0a0;
 
 $font_family:
     system, -apple-system, BlinkMacSystemFont, "San Francisco",
@@ -105,6 +106,10 @@ h1 {
 
 .nowrap {
     white-space: nowrap
+}
+
+.subtle {
+    color: $subtle_text;
 }
 
 .clear {
