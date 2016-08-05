@@ -186,6 +186,10 @@ h1 {
     font-size: 2.2em;
     line-height: 1.25em;
     padding-top: 1em;
+
+    a, a:hover, a:focus {
+        text-decoration: underline;
+    }
 }
 
 .section {

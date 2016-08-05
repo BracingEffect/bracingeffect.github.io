@@ -156,9 +156,14 @@
     <div class="content-left">
         <div class="iphone background-image">
             <span class="spacer"></span>
-            <a href="/ChaosClock/" aria-label="Chaos Clock website">
-                <div class="iphone-screen background-image"></div>
-            </a>
+            <div class="iphone-screen background-image">
+                <video controls loop
+                    class="demovideo"
+                    onclick="if(typeof InstallTrigger == 'undefined') { (this.paused ? this.play() : this.pause()); }">
+                    <source src="images/chaosclock-demo01.webm" type="video/webm"></source>
+                    <source src="images/chaosclock-demo01.mp4" type="video/mp4"></source>
+                </video>
+            </div>
         </div>
     </div>
     <div class="clear"></div>
