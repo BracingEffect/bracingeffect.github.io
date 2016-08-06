@@ -112,8 +112,11 @@
         <div class="iphone background-image">
             <span class="spacer"></span>
             <div class="iphone-screen background-image">
-                <video autoplay muted controls loop
+                <video muted controls loop
+                    data-appear-top-offset="-355"
+                    id="jurbly-demovideo"
                     class="demovideo"
+                    poster="images/jurbly-screenshot01.png"
                     onclick="if(typeof InstallTrigger == 'undefined') { (this.paused ? this.play() : this.pause()); }">
                     <source src="images/jurbly-demo01.webm" type="video/webm"></source>
                     <source src="images/jurbly-demo01.mp4" type="video/mp4"></source>
@@ -157,8 +160,11 @@
         <div class="iphone background-image">
             <span class="spacer"></span>
             <div class="iphone-screen background-image">
-                <video autoplay muted controls loop
+                <video muted controls loop
+                    data-appear-top-offset="-355"
+                    id="chaosclock-demovideo"
                     class="demovideo"
+                    poster="images/chaosclock-screenshot01.png"
                     onclick="if(typeof InstallTrigger == 'undefined') { (this.paused ? this.play() : this.pause()); }">
                     <source src="images/chaosclock-demo01.webm" type="video/webm"></source>
                     <source src="images/chaosclock-demo01.mp4" type="video/mp4"></source>
@@ -241,6 +247,12 @@
 {% include js/imagesloaded.pkgd.min.js %}
 </script>
 <script type="text/javascript">
+{% include js/jquery.min.js %}
+</script>
+<script type="text/javascript">
+{% include js/jquery.appear.js %}
+</script>
+<script type="text/javascript">
 
 imagesLoaded('#hero-image', { background: true }, function(instance) {
     var el = document.getElementById('hero-image');
@@ -258,6 +270,20 @@ imagesLoaded('#be-title', { background: true }, function(instance) {
     el = document.getElementById('be-description');
     el.className = el.className.replace('initial', '');
 });
+
+var onVideoAppear = function() {
+    var $video = $(this);
+    $video.off('appear', onVideoAppear);
+    if(this.play) {
+        this.play();
+    }
+}
+
+$('#jurbly-demovideo').appear();
+$('#jurbly-demovideo').on('appear', onVideoAppear);
+
+$('#chaosclock-demovideo').appear();
+$('#chaosclock-demovideo').on('appear', onVideoAppear);
 
 </script>
 
