@@ -28,6 +28,9 @@ $text-color:    #555 !default;
 // Media queries breakpoints
 //-------------------------------------------------------------
 
+$screen-xs:     480px !default;
+$screen-xs-min: $screen-xs !default;
+
 // $screen-sm:     704px !default;
 $screen-sm:     768px !default;
 $screen-sm-min: $screen-sm !default;
