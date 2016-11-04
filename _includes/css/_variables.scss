@@ -1,0 +1,98 @@
+
+$bracing_blue: #0080ff; // rgb(0,128,255)
+$dark_bracing_blue: #0066cc; // rgb(0,102,204)
+$jurbly_pink: #FC69B4; // rgb(252,105,180)
+$parsnip_green: #40C000; // rgb(64,192,0)
+$dark_parsnip_green: #309000; // rgb(48,144,0)
+$chaos_violet: #a00aa0; // rgb(160,10,160)
+$github_purple: #400440; // rgb(64,4,64)
+
+
+$images_path: "images/";
+
+
+//-------------------------------------------------------------
+// Bootstrap color scheme
+//-------------------------------------------------------------
+
+$brand-primary: $bracing_blue !default;
+$brand-success: #5cb85c !default;
+$brand-info:    #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger:  #d9534f !default;
+
+$text-color:    #555 !default;
+
+
+//-------------------------------------------------------------
+// Media queries breakpoints
+//-------------------------------------------------------------
+
+// $screen-sm:     704px !default;
+$screen-sm:     768px !default;
+$screen-sm-min: $screen-sm !default;
+
+// $screen-md:     864px !default;
+$screen-md:     992px !default;
+$screen-md-min: $screen-md !default;
+
+// $screen-lg:     1024px !default;
+$screen-lg:     1200px !default;
+$screen-lg-min: $screen-lg !default;
+
+
+//-------------------------------------------------------------
+// Grid system
+//-------------------------------------------------------------
+
+$grid-gutter-width: 30px !default;
+
+
+//-------------------------------------------------------------
+// Container sizes
+//-------------------------------------------------------------
+
+// For `$screen-sm-min` and up.
+$container-tablet:        ($screen-sm - $grid-gutter-width - 18px) !default;
+
+//  For `$screen-md-min` and up.
+$container-desktop:       ($screen-md - $grid-gutter-width - 22px) !default;
+
+//  For `$screen-lg-min` and up.
+$container-large-desktop: ($screen-lg - $grid-gutter-width - 30px) !default;
+
+
+//-------------------------------------------------------------
+// Navbar
+//-------------------------------------------------------------
+
+$navbar-default-color:  #777 !default;
+$navbar-default-bg:     #fff !default;
+$navbar-default-border: #fff !default;
+
+$navbar-default-link-color:        #777 !default;
+$navbar-default-link-hover-color:  #333 !default;
+$navbar-default-link-hover-bg:     transparent !default;
+$navbar-default-link-active-color: #fff !default;
+$navbar-default-link-active-bg:    $bracing_blue !default;
+
+$navbar-default-toggle-hover-bg:          #ddd !default;
+$navbar-default-toggle-icon-bar-bg:       #888 !default;
+$navbar-default-toggle-icon-bar-hover-bg: #fff !default;
+$navbar-default-toggle-border-color:      #ddd !default;
+
+
+//-------------------------------------------------------------
+// Typography
+//-------------------------------------------------------------
+
+$icon-font-path: "fonts/" !default;
+
+$font-family-sans-serif:
+    system, -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-base:          16px !default;
+
+
+@import "bootstrap/variables";

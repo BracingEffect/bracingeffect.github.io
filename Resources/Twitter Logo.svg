@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="400"
+   viewBox="0 0 400 400"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Twitter Logo.svg"
+   inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/twitter-logo_2x.png"
+   inkscape:export-xdpi="18"
+   inkscape:export-ydpi="18">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#808080"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-137.19786"
+     inkscape:cy="196.59069"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4134"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     transform="translate(0,-652.36221)"
+     id="g4134"
+     inkscape:groupmode="layer"
+     inkscape:label="Logo">
+    <path
+       style="opacity:1;fill:#0080ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.34300041;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 276.93705,689.82768 c 23.60386,0 44.93222,9.96379 59.89989,25.91335 c 18.6939,-3.67988 36.25455,-10.50756 52.11256,-19.91327 c -6.12569,19.1636 -19.1396,35.2456 -36.08142,45.4013 c 16.5982,-1.98398 32.4158,-6.39183 47.13192,-12.91994 c -11.00174,16.45578 -24.91372,30.91012 -40.94812,42.47819 c 0.1568,3.52181 0.23849,7.05749 0.23849,10.61521 c 0,108.44571 -82.54582,233.49418 -233.49113,233.49418 C 79.455149,1014.8967 36.317887,1001.3075 0,978.02193 c 6.4199722,0.75981 12.953193,1.1491 19.577131,1.1491 c 38.449908,0 73.83491,-13.1176 101.920829,-35.12937 C 85.585913,943.38193 55.27715,919.65188 44.833383,887.04994 c 5.01185,0.95577 10.15322,1.47281 15.440806,1.47281 c 7.483844,0 14.735927,-1.0028 21.621423,-2.87894 C 44.353646,878.1038 16.062957,844.93655 16.062957,805.17615 c 0,-0.3456 0.0014,-0.68961 0.0092,-1.0313 c 11.064029,6.14596 23.718459,9.83686 37.170519,10.26276 C 31.222871,799.69205 16.73601,774.57398 16.73601,746.10198 c 0,-15.04016 4.046786,-29.13567 11.110762,-41.25575 c 40.476036,49.64962 100.943278,82.3248 169.147018,85.74661 c -1.39798,-6.00611 -2.12357,-12.27239 -2.12357,-18.70452 c 0,-45.31974 36.74711,-82.06064 82.06689,-82.06064 z"
+       id="path4136"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/ratface/Sites/bracingeffect.github.io/images/twitter.png"
+       inkscape:export-xdpi="18.000002"
+       inkscape:export-ydpi="18.000002" />
+  </g>
+  <g
+     inkscape:label="Encircled"
+     inkscape:groupmode="layer"
+     id="g4139"
+     transform="translate(0,-652.36221)"
+     style="display:none">
+    <path
+       style="opacity:1;fill:#0080ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.34300041;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 200,-300 A 200,200 0 0 0 0,-100 A 200,200 0 0 0 200,100 A 200,200 0 0 0 400,-100 A 200,200 0 0 0 200,-300 Z m 47.33594,100 c 14.52241,0 27.64442,6.13008 36.85351,15.94336 c 11.50152,-2.26413 22.30585,-6.46489 32.0625,-12.25195 c -3.76902,11.7907 -11.77562,21.68509 -22.19922,27.93359 c 10.21195,-1.22066 19.94401,-3.93285 28.99805,-7.94922 c -6.76901,10.12456 -15.3284,19.01751 -25.19336,26.13477 c 0.0972,2.16694 0.14649,4.34218 0.14649,6.53125 C 298.00391,-76.936533 247.21752,0 154.34766,0 C 125.83441,0 99.293949,-8.3608 76.949219,-22.6875 c 3.94991,0.4676 7.969492,0.707031 12.044922,0.707031 c 23.656449,0 45.427049,-8.070381 62.707029,-21.613281 c -22.09494,-0.406 -40.74228,-15.006023 -47.16797,-35.064453 c 3.08365,0.5882 6.24655,0.90625 9.5,0.90625 c 4.60455,0 9.06611,-0.617285 13.30274,-1.771485 c -23.0978,-4.639 -40.503909,-25.045402 -40.503909,-49.507812 c 0,-0.21286 8.6e-4,-0.42437 0.0059,-0.63477 c 6.80717,3.78133 14.592769,6.0524 22.869139,6.31446 c -13.547853,-9.05406 -22.460936,-24.50792 -22.460936,-42.02539 c 0,-9.25339 2.489797,-17.92596 6.835937,-25.38282 c 24.902949,30.54724 62.105699,50.65046 104.068359,52.75586 c -0.86012,-3.6952 -1.30664,-7.55048 -1.30664,-11.50781 c 0,-27.8832 22.60896,-50.48828 50.49219,-50.48828 z"
+       transform="translate(0,952.36221)"
+       id="path4255"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
