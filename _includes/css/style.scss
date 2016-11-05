@@ -10,10 +10,7 @@
 
 html,
 body {
-    color: $text-color;
-
     font-family: $font-family-sans-serif;
-    font-size: 18px;
     font-weight: 300;
 
     margin: 0;
@@ -25,6 +22,7 @@ body {
 
 body {
     background-color: $body-bg;
+
     position: relative;
 
     -webkit-font-smoothing: antialiased;
@@ -33,20 +31,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+
+    margin: 0;
+    padding: 0;
 }
 
-em {
+i, em {
     font-style: italic;
 }
 
 a {
     text-decoration: none;
-}
 
-a:hover, a:focus {
-    text-decoration: underline;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
 }
 
 .accessibility-text {
@@ -153,8 +152,8 @@ a:hover, a:focus {
 // Navbar
 //-------------------------------------------------------------
 
-$be-logo-height: 32px;
-$be-logo-width: 32px;
+$be-logo-height: 34px;
+$be-logo-width: 179px;
 
 .navbar-default {
 
@@ -181,11 +180,9 @@ $be-logo-width: 32px;
         }
     }
 
-    .navbar-nav {
-        > .active > a {
-            &, &:hover, &:focus {
-                @include transition(all 0.2s ease 0s);
-            }
+    .navbar-nav > .active > a {
+        &, &:hover, &:focus {
+            @include transition(all 0.2s ease 0s);
         }
     }
 }
@@ -279,7 +276,7 @@ $be-logo-width: 32px;
 
 
 //-------------------------------------------------------------
-// Responsive breakpoints
+// Retina images
 //-------------------------------------------------------------
 
 #be-title{background-image:url(#{$images_path}bracingeffect-title.png)}
