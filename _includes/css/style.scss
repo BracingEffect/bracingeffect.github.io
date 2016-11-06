@@ -117,11 +117,10 @@ a {
     hr {
         display: block;
         height: 1px;
-        margin: 50px 0;
+        margin: 50px auto;
         padding: 0;
         background-color: #aaa;
         width: 50%;
-        left: 25%;
         position: relative;
         border: none;
     }
@@ -254,6 +253,10 @@ $be-logo-width: 179px;
 //-------------------------------------------------------------
 
 #contact {
+
+    a {
+        display: inline-block;
+    }
 
     .logo {
         height: 40px;
