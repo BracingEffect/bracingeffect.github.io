@@ -221,6 +221,7 @@ $be-logo-width: 179px;
             max-width: 96%;
             @media (min-width: $screen-sm-min) {
                 max-width: 100%;
+                width: 600px;
             }
 
             h1 {
