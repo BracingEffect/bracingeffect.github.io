@@ -28,19 +28,23 @@ $text-color:    #555 !default;
 // Media queries breakpoints
 //-------------------------------------------------------------
 
-$screen-xs:     480px !default;
+// $screen-xs:     480px !default;
+$screen-xs:     398px !default;
 $screen-xs-min: $screen-xs !default;
 
 // $screen-sm:     704px !default;
-$screen-sm:     768px !default;
+// $screen-sm:     768px !default;
+$screen-sm:     680px !default;
 $screen-sm-min: $screen-sm !default;
 
 // $screen-md:     864px !default;
-$screen-md:     992px !default;
+// $screen-md:     992px !default;
+$screen-md:     796px !default;
 $screen-md-min: $screen-md !default;
 
 // $screen-lg:     1024px !default;
-$screen-lg:     1200px !default;
+// $screen-lg:     1200px !default;
+$screen-lg:     1024px !default;
 $screen-lg-min: $screen-lg !default;
 
 

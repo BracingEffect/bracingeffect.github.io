@@ -15,14 +15,11 @@ body {
 
     margin: 0;
     padding: 0;
-
     height: 100%;
     width: 100%;
 }
 
 body {
-    background-color: $body-bg;
-
     position: relative;
 
     -webkit-font-smoothing: antialiased;
@@ -36,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-i, em {
+em, i {
     font-style: italic;
 }
 
@@ -45,6 +42,10 @@ a {
 
     &:hover, &:focus {
         text-decoration: none;
+
+        .background-image {
+            @include opacity(0.8);
+        }
     }
 }
 
@@ -70,18 +71,20 @@ a {
     background-position: 50% 50%;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    color: transparent;
     display: inline-block;
-    line-height: 1em;
     vertical-align: middle;
 }
 
 .section-image {
+    background-color: transparent;
     background-position: 50% 50%;
     background-size: 100% auto;
     @include background-size(cover);
     background-repeat: no-repeat;
+    display: inline-block;
     vertical-align: middle;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .spacer {
@@ -163,19 +166,26 @@ $be-logo-width: 179px;
         }
     }
 
+    .navbar-collapse {
+        &.in, &.collapsing {
+            border-color: $navbar-default-toggle-border-color;
+            @include box-shadow(0 10px 9px rgba(0, 0, 0, 0.3));
+        }
+    }
+
     .navbar-brand {
         font-weight: 400;
 
         position: relative;
         padding: (($navbar-height - $be-logo-height) / 2) 15px;
 
+        visibility: hidden;
+        @include opacity(0);
+        @include transition(all 0.3s ease 0s);
+
         #be-logo {
             width: $be-logo-width;
             height: $be-logo-height;
-        }
-
-        span {
-            margin-left: 0.5em;
         }
     }
 
@@ -183,6 +193,14 @@ $be-logo-width: 179px;
         &, &:hover, &:focus {
             @include transition(all 0.2s ease 0s);
         }
+    }
+}
+
+.navbar-default.opaque, .navbar-default.expanded {
+
+    .navbar-brand {
+        visibility: visible;
+        @include opacity(1);
     }
 }
 
@@ -201,6 +219,9 @@ $be-logo-width: 179px;
             margin-bottom: 25px;
 
             max-width: 96%;
+            @media (min-width: $screen-sm-min) {
+                max-width: 100%;
+            }
 
             h1 {
                 width: 100%;
@@ -209,8 +230,6 @@ $be-logo-width: 179px;
                     max-width: 100%;
                     height: 114px;
                     width: 600px;
-
-                    display: inline-block;
 
                     background-position: 50% 75%;
                 }
