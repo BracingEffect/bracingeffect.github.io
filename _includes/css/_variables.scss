@@ -23,6 +23,10 @@ $brand-danger:  #d9534f !default;
 
 $text-color:    #555 !default;
 
+$link-color:            $bracing_blue !default;
+$link-hover-color:      lighten($link-color, 10%) !default;
+$link-hover-decoration: none !default;
+
 
 //-------------------------------------------------------------
 // Media queries breakpoints

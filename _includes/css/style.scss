@@ -264,6 +264,20 @@ $be-logo-width: 179px;
         width: 80px;
         margin: 25px 0;
     }
+
+    a {
+        display: inline-block;
+
+        h2 {
+            color: $text-color;
+        }
+
+        &:hover, &:focus {
+            h2 {
+                color: $link-color;
+            }
+        }
+    }
 }
 
 
