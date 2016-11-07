@@ -309,6 +309,12 @@ $be-logo-width: 179px;
     color: #909090;
 
     padding: 20px 0;
+
+    font-size: 0.85em;
+
+    @media (min-width: $screen-xs-min) {
+        font-size: 1em;
+    }
 }
 
 
