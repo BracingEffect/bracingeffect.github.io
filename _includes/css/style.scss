@@ -169,8 +169,10 @@ $be-logo-width: 179px;
 
     .navbar-collapse {
         &.in, &.collapsing {
-            border-color: $navbar-default-toggle-border-color;
-            @include box-shadow(0 10px 9px rgba(0, 0, 0, 0.3));
+            @media (max-width: $screen-xs-max) {
+                border-color: $navbar-default-toggle-border-color;
+                @include box-shadow(0 10px 9px rgba(0, 0, 0, 0.3));
+            }
         }
     }
 
@@ -190,18 +192,26 @@ $be-logo-width: 179px;
         }
     }
 
-    .navbar-nav > .active > a {
-        &, &:hover, &:focus {
-            @include transition(all 0.2s ease 0s);
+    &.opaque {
+        .navbar-brand {
+            visibility: visible;
+            @include opacity(1);
         }
     }
-}
 
-.navbar-default.opaque, .navbar-default.expanded {
+    &.expanded {
+        .navbar-brand {
+            @media (max-width: $screen-xs-max) {
+                visibility: visible;
+                @include opacity(1);
+            }
+        }
+    }
 
-    .navbar-brand {
-        visibility: visible;
-        @include opacity(1);
+    .navbar-nav > .active > a {
+        &, &:hover, &:focus {
+            @include transition(color, background-color 0.2s ease 0s);
+        }
     }
 }
 
