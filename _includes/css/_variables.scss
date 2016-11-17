@@ -22,6 +22,7 @@ $brand-warning: #f0ad4e !default;
 $brand-danger:  #d9534f !default;
 
 $text-color:    #555 !default;
+$subtle-color:  lighten($text-color, 20%) !default;
 
 $link-color:            $bracing_blue !default;
 $link-hover-color:      lighten($link-color, 10%) !default;
@@ -48,7 +49,7 @@ $screen-md-min: $screen-md !default;
 
 // $screen-lg:     1024px !default;
 // $screen-lg:     1200px !default;
-$screen-lg:     1024px !default;
+$screen-lg:     1200px !default;
 $screen-lg-min: $screen-lg !default;
 
 

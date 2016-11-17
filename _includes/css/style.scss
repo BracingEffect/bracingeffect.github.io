@@ -48,6 +48,10 @@ a {
     }
 }
 
+.subtle {
+    color: $subtle-color;
+}
+
 .accessibility-text {
     height: 1px;
     width: 1px;
@@ -147,6 +151,42 @@ a {
     hr {
         background-color: #a0a0a0;
         @include gradient-horizontal-three-colors(#f5f5f5, #a0a0a0, 50%, #f5f5f5);
+    }
+}
+
+$sizes: ('xs', 'sm', 'md', 'lg');
+$media-sizes: (
+    xs: $screen-xs-min,
+    sm: $screen-sm-min,
+    md: $screen-md-min,
+    lg: $screen-lg-min
+);
+
+@each $size in $sizes {
+    .col-#{$size}-left {
+        @media (min-width: map-get($media-sizes, $size)) {
+            float: left;
+            & > * { text-align: right; }
+        }
+    }
+
+    .col-#{$size}-right {
+        @media (min-width: map-get($media-sizes, $size)) {
+            float: right;
+            & > * { text-align: left; }
+        }
+    }
+
+    .#{$size}-pull-right {
+        @media (min-width: map-get($media-sizes, $size)) {
+            float: right;
+        }
+    }
+
+    .#{$size}-pull-left {
+        @media (min-width: map-get($media-sizes, $size)) {
+            float: left;
+        }
     }
 }
 
@@ -274,7 +314,7 @@ $be-logo-width: 179px;
     .logo {
         height: 80px;
         width: 80px;
-        margin: 25px 0;
+        margin: 25px 0 10px;
     }
 
     a {
@@ -282,6 +322,7 @@ $be-logo-width: 179px;
 
         h2 {
             color: $text-color;
+            font-size: 40px;
         }
 
         &:hover, &:focus {
@@ -289,6 +330,29 @@ $be-logo-width: 179px;
                 color: $link-color;
             }
         }
+    }
+
+    .description {
+
+    }
+
+    #jurbly-screenshot, #chaosclock-screenshot, #parsnip-screenshot {
+        height: auto;
+        width: 320px;
+        max-width: 100%;
+
+        > .spacer {
+            padding-top: 177.5%;
+        }
+
+        @media (min-width: $screen-xs-min) {
+            width: 320px;
+            height: 568px;
+        }
+
+        margin: 0 0 50px;
+
+        @include box-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
     }
 }
 
@@ -336,8 +400,11 @@ $be-logo-width: 179px;
 #be-title{background-image:url(#{$images_path}bracingeffect-title.png)}
 #be-logo{background-image:url(#{$images_path}bracingeffect-logo.png)}
 #jurbly-logo{background-image:url(#{$images_path}jurbly-logo.png)}
+#jurbly-screenshot{background-image:url(#{$images_path}jurbly-screenshot.png)}
 #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo.png)}
+#chaosclock-screenshot{background-image:url(#{$images_path}chaosclock-screenshot.png)}
 #parsnip-logo{background-image:url(#{$images_path}parsnip-logo.png)}
+#parsnip-screenshot{background-image:url(#{$images_path}parsnip-screenshot.png)}
 #freelance-logo{background-image:url(#{$images_path}freelance-logo.png)}
 #handcrafted-logo{background-image:url(#{$images_path}handcrafted-logo.png)}
 #email-logo{background-image:url(#{$images_path}email-logo.png)}
@@ -355,8 +422,11 @@ only screen and (min-resolution:2dppx) {
     #be-title{background-image:url(#{$images_path}bracingeffect-title_2x.png)}
     #be-logo{background-image:url(#{$images_path}bracingeffect-logo_2x.png)}
     #jurbly-logo{background-image:url(#{$images_path}jurbly-logo_2x.png)}
+    #jurbly-screenshot{background-image:url(#{$images_path}jurbly-screenshot_2x.png)}
     #chaosclock-logo{background-image:url(#{$images_path}chaosclock-logo_2x.png)}
+    #chaosclock-screenshot{background-image:url(#{$images_path}chaosclock-screenshot_2x.png)}
     #parsnip-logo{background-image:url(#{$images_path}parsnip-logo_2x.png)}
+    #parsnip-screenshot{background-image:url(#{$images_path}parsnip-screenshot_2x.png)}
     #freelance-logo{background-image:url(#{$images_path}freelance-logo_2x.png)}
     #handcrafted-logo{background-image:url(#{$images_path}handcrafted-logo_2x.png)}
     #email-logo{background-image:url(#{$images_path}email-logo_2x.png)}
