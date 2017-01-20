@@ -163,30 +163,24 @@ $media-sizes: (
 );
 
 @each $size in $sizes {
-    .col-#{$size}-left {
-        @media (min-width: map-get($media-sizes, $size)) {
+
+    @media (min-width: map-get($media-sizes, $size)) {
+        .col-#{$size}-left {
             float: left;
             & > * { text-align: right; }
         }
-    }
 
-    .col-#{$size}-right {
-        @media (min-width: map-get($media-sizes, $size)) {
+        .col-#{$size}-right {
             float: right;
             & > * { text-align: left; }
         }
-    }
 
-    .#{$size}-pull-right {
-        @media (min-width: map-get($media-sizes, $size)) {
-            float: right;
-        }
-    }
-
-    .#{$size}-pull-left {
-        @media (min-width: map-get($media-sizes, $size)) {
-            float: left;
-        }
+        .#{$size}-pull-right { float: right; }
+        .#{$size}-pull-left { float: left; }
+        .text-#{$size}-left { text-align: left; }
+        .text-#{$size}-right { text-align: right; }
+        .text-#{$size}-center { text-align: center; }
+        .text-#{$size}-justify { text-align: justify; }
     }
 }
 
@@ -261,7 +255,7 @@ $be-logo-width: 179px;
 //-------------------------------------------------------------
 
 #home {
-    padding: 120px 0 60px;
+    padding: 120px 0;
 
     .container {
 

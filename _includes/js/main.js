@@ -2,12 +2,13 @@
 jQuery(document).ready(function($) {
 
     var $window = $(window),
+        $body = $('body'),
         $navbar = $('#top-navbar'),
         $navbarContent = $('#top-navbar-content'),
         $navbarToggle = $('#top-navbar-toggle'),
         $titleImage = $('#be-title');
 
-    $navbarContent.localScroll({
+    $body.localScroll({
         filter:'.smoothScroll',
         duration: 300,
         hash: true,
