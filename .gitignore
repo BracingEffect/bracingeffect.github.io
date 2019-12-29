@@ -2,6 +2,7 @@
 Gemfile.lock
 _site
 .jekyll-metadata
+.bundle
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

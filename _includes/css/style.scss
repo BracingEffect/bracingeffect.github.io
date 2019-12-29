@@ -116,7 +116,7 @@ a {
 .section {
     padding: 60px 0;
 
-    h2 {
+    h1, h2 {
         margin: 0 0 50px;
     }
 
@@ -347,6 +347,18 @@ $be-logo-width: 179px;
         margin: 0 0 50px;
 
         @include box-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+    }
+}
+
+
+//-------------------------------------------------------------
+// Privacy
+//-------------------------------------------------------------
+
+#privacy {
+
+    .description {
+        padding-bottom: 50px;
     }
 }
 
